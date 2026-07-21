@@ -376,3 +376,16 @@ requires no API key, backend service, or live Codex execution. From `frontend/`,
 run `npm install`, `npm run dev`, or `npm run validate` for linting, type checks,
 tests, and a static production build. The demo renders accepted observable
 evidence only and never exposes chain-of-thought.
+
+## Live Demo and Video
+
+- **Live demo:** https://codextimemachine-56sgrk4qu-nitinjaiswalnjwork-5703s-projects.vercel.app/
+- **Demo video:** https://youtu.be/hp23r9CMQG8
+
+## How Codex and GPT-5.6 Were Used
+
+Codex was the primary engineering agent used to build Codex Time Machine during OpenAI Build Week. It accelerated repository analysis, architecture design, implementation, test generation, integrity validation, frontend development, and documentation.
+
+GPT-5.6 was used through Codex for the historical controlled acceptance run and for complex implementation work requiring repository-wide reasoning. I made the core product decisions: defining the temporal evidence boundary, limiting Ghost Engineer to a minimum non-answer-revealing clue, separating total activity from target-specific coverage, and requiring every published conclusion to be tied to observable evidence and cryptographic hashes.
+
+Routine regression testing used deterministic fake providers and recorded fixtures to avoid unnecessary live-model calls. The final demo itself is fully static and requires no API key or live model.
