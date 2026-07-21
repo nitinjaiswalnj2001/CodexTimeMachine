@@ -1,0 +1,2 @@
+import type { DemoBundle } from '../types/demo';
+export async function loadBundle():Promise<DemoBundle>{const r=await fetch('/demo/R-SMOKE-WSL-001/demo_bundle.json');if(!r.ok)throw new Error(`Evidence bundle unavailable (${r.status})`);const d=await r.json();if(!d?.artifacts?.trajectory||!d?.artifacts?.counterfactual||!d?.artifacts?.intervention)throw new Error('Evidence bundle is missing required accepted artifacts.');return d as DemoBundle;}

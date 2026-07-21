@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "fixture_notice": "All values in this file are synthetic and exist only to validate the Codex Time Machine evaluation mechanic. They are not real LegalRAG production history or performance results.",
+  "values_are_synthetic": true,
+  "evaluation_purpose": "Controlled boundary-only demonstration that a four-example focused comparison cannot justify a production retrieval default.",
+  "strategies": ["BM25", "semantic-retrieval"],
+  "metric_definitions": {
+    "hit_at_5": {"minimum": 0.0, "maximum": 1.0, "meaning": "Synthetic fraction of labeled queries with a relevant result in the first five retrieved documents."},
+    "mrr": {"minimum": 0.0, "maximum": 1.0, "meaning": "Synthetic mean reciprocal rank of the first relevant retrieved document."}
+  },
+  "query_groups": [
+    {"group": "lexical-overlap", "synthetic_cases": 20, "strategy_results": [{"strategy": "BM25", "metrics": {"hit_at_5": 0.92, "mrr": 0.78}}, {"strategy": "semantic-retrieval", "metrics": {"hit_at_5": 0.84, "mrr": 0.70}}]},
+    {"group": "paraphrased", "synthetic_cases": 20, "strategy_results": [{"strategy": "BM25", "metrics": {"hit_at_5": 0.61, "mrr": 0.46}}, {"strategy": "semantic-retrieval", "metrics": {"hit_at_5": 0.82, "mrr": 0.67}}]},
+    {"group": "synonym-heavy", "synthetic_cases": 20, "strategy_results": [{"strategy": "BM25", "metrics": {"hit_at_5": 0.54, "mrr": 0.39}}, {"strategy": "semantic-retrieval", "metrics": {"hit_at_5": 0.79, "mrr": 0.64}}]},
+    {"group": "long-form-legal", "synthetic_cases": 20, "strategy_results": [{"strategy": "BM25", "metrics": {"hit_at_5": 0.65, "mrr": 0.49}}, {"strategy": "semantic-retrieval", "metrics": {"hit_at_5": 0.76, "mrr": 0.62}}]},
+    {"group": "short-exact-term", "synthetic_cases": 20, "strategy_results": [{"strategy": "BM25", "metrics": {"hit_at_5": 0.95, "mrr": 0.83}}, {"strategy": "semantic-retrieval", "metrics": {"hit_at_5": 0.80, "mrr": 0.68}}]}
+  ],
+  "aggregate_results": {
+    "method": "Unweighted arithmetic mean across the five equal-sized synthetic query groups.",
+    "strategy_results": [{"strategy": "BM25", "metrics": {"hit_at_5": 0.734, "mrr": 0.590}}, {"strategy": "semantic-retrieval", "metrics": {"hit_at_5": 0.802, "mrr": 0.662}}]
+  },
+  "synthetic_conclusion": "The four-example focused comparison was insufficient to justify a production retrieval default. The controlled synthetic results vary by query group and do not establish a universal production winner; a representative labeled evaluation is required before choosing a default.",
+  "limitations": "This is synthetic boundary-only fixture evidence, not organic project history and not real LegalRAG performance. It must not guide production deployment or be presented as a production benchmark. Additional approaches require separate evaluation."
+}

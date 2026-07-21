@@ -1,0 +1,73 @@
+__pycache__/
+.pytest_cache/
+*.egg-info/
+backend/scenarios/*/sealed_snapshot/
+backend/scenarios/*/runs/
+.ctm_runs/
+.testdeps/
+.venv/
+.pytest-runtime/
+.pytest-temp/
+*.pyc
+*-failed-evidence.zip
+frontend/node_modules/
+frontend/dist/
+frontend/tsconfig.tsbuildinfo
+
+# Local development
+.venv/
+.npm-cache/
+.pytest_cache/
+.pytest-runtime/
+.pytest-temp/
+__pycache__/
+*.pyc
+
+# Local Codex configuration
+.agents/
+.codex/
+
+# Private/raw evidence
+.ctm_runs/
+
+# Frontend generated files
+frontend/node_modules/
+frontend/dist/
+frontend/tsconfig.tsbuildinfo
+
+# Large deliverables
+deliverables/video/
+*.mp4
+
+# Temporary evidence
+*-failed-evidence.zip
+
+# Local environments
+.venv/
+.npm-cache/
+.pytest_cache/
+.pytest-runtime/
+.pytest-temp/
+
+# Python generated files
+__pycache__/
+*.pyc
+
+# Local Codex configuration
+.agents/
+.codex/
+
+# Raw/private run evidence
+.ctm_runs/
+
+# Frontend generated files
+frontend/node_modules/
+frontend/dist/
+frontend/tsconfig.tsbuildinfo
+
+# Large video files
+deliverables/video/
+*.mp4
+
+# Temporary evidence
+*-failed-evidence.zip

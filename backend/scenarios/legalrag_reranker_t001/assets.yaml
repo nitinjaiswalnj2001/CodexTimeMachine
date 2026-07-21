@@ -1,0 +1,66 @@
+schema_version: "1.1"
+scenario_id: legalrag-reranker-t001
+assets:
+  - asset_id: retrieval-source-t0
+    logical_path: legalrag/retrieval.py
+    asset_kind: SOURCE
+    source_path: ../../../tests/fixtures/legalrag_t001/project/legalrag/retrieval.py
+    availability_basis: Present in the controlled T0 fixture revision.
+    visibility_scope: PAST_CODEX
+    availability:
+      status: AVAILABLE
+      reason: Source is part of the explicitly selected T0 project evidence.
+  - asset_id: retrieval-test-t0
+    logical_path: tests/test_retrieval.py
+    asset_kind: TEST
+    source_path: ../../../tests/fixtures/legalrag_t001/project/tests/test_retrieval.py
+    availability_basis: Present in the controlled T0 fixture revision.
+    visibility_scope: PAST_CODEX
+    availability:
+      status: AVAILABLE
+      reason: Test is part of the explicitly selected T0 project evidence.
+  - asset_id: retrieval-config-t0
+    logical_path: config/retrieval.yaml
+    asset_kind: CONFIG
+    source_path: ../../../tests/fixtures/legalrag_t001/project/config/retrieval.yaml
+    availability_basis: Present in the controlled T0 fixture revision.
+    visibility_scope: PAST_CODEX
+    availability:
+      status: AVAILABLE
+      reason: Configuration is part of the explicitly selected T0 evidence.
+  - asset_id: reranker-experiment-t1
+    logical_path: evidence/reranker_experiment.json
+    asset_kind: EXPERIMENT_RESULT
+    source_path: ../../../tests/fixtures/legalrag_t001/future/reranker_experiment.json
+    availability_basis: Produced after controlled fixture revision T0.
+    visibility_scope: PAST_CODEX
+    availability:
+      status: LOCKED_FUTURE
+      reason: Experiment result is classified as post-T0 evidence.
+  - asset_id: ghost-recommendation-t1
+    logical_path: evidence/ghost_recommendation.md
+    asset_kind: DEVELOPMENT_NOTE
+    source_path: ../../../tests/fixtures/legalrag_t001/future/ghost_recommendation.md
+    availability_basis: Reserved as the controlled clue for the Ghost-only run.
+    visibility_scope: GHOST_ONLY
+    availability:
+      status: AVAILABLE
+      reason: Evidence is available only to the controlled Ghost context.
+  - asset_id: evaluator-outcome-t1
+    logical_path: evaluation/future_outcome.yaml
+    asset_kind: METRIC
+    source_path: future_outcome.yaml
+    availability_basis: Ground truth reserved for evaluation.
+    visibility_scope: EVALUATOR_ONLY
+    availability:
+      status: AVAILABLE
+      reason: Outcome metadata is visible only to the evaluator.
+  - asset_id: excluded-session-log
+    logical_path: notes/session.log
+    asset_kind: SESSION_ARTIFACT
+    source_path: ../../../tests/fixtures/legalrag_t001/excluded/session.log
+    availability_basis: Deliberately outside the evaluation evidence set.
+    visibility_scope: PAST_CODEX
+    availability:
+      status: EXCLUDED
+      reason: Session artifact is irrelevant and explicitly excluded.

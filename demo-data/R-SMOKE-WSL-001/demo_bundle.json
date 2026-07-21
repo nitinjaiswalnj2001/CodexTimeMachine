@@ -1,0 +1,3299 @@
+{
+  "artifacts": {
+    "assessment": {
+      "assessment_hash": "5893ff11114cb3424871a40ddf94b214c8398bf7a7d66a8cb641c144503739da",
+      "assessment_id": "asm-c54b58320900677f981ffa68",
+      "context_hash": "a834c73f3310ef8bc418d2a2c96c12acc80d68cc5b69424291a4ec6322849ab3",
+      "context_id": "ctx-4b07d63130f7e2b991184371",
+      "created_at": "2026-07-16T12:00:00Z",
+      "decision_under_evaluation": "Selection of a production-default LegalRAG retrieval strategy.",
+      "evaluator_metadata": {
+        "exit_code": 0,
+        "model": "gpt-5.6-sol",
+        "network_enabled": false,
+        "provider": "fake",
+        "provider_version": "deterministic-fake-1",
+        "reasoning_effort": "high",
+        "thread_id": "evaluator-thread-1",
+        "tool_policy": "none",
+        "web_search": "disabled"
+      },
+      "limitations": [
+        "The assessment uses observable evidence only and does not reconstruct hidden reasoning.",
+        "Natural-language entailment is conservatively reference-validated; full semantic proof is not claimed."
+      ],
+      "overall_finding": {
+        "blind_spot_category": "INSUFFICIENT_EVALUATION",
+        "confidence": 0.9,
+        "limitations": [
+          "Natural-language entailment remains evaluator judgment bounded by cited evidence."
+        ],
+        "statement": "Observable evidence supports an insufficient-evaluation blind spot; it does not establish that BM25 was universally wrong or that semantic retrieval is the correct default.",
+        "status": "BLIND_SPOT_IDENTIFIED",
+        "supporting_future_evidence_ids": [
+          "representative-retrieval-eval"
+        ],
+        "supporting_past_event_ids": [
+          "evt-ece8b67bd08de050880d387c",
+          "evt-6334054892e91d471d6b5b94"
+        ],
+        "supporting_target_ids": [
+          "representative-labeled-evaluation"
+        ]
+      },
+      "run_id": "R-SMOKE-WSL-001",
+      "scenario_id": "legalrag-reranker-t001",
+      "schema_version": "1.0",
+      "target_assessments": [
+        {
+          "category": "INSUFFICIENT_EVALUATION",
+          "confidence": 0.9,
+          "known_future_evidence": [
+            {
+              "evidence_id": "representative-retrieval-eval",
+              "relevance": "Synthetic future evidence shows the focused comparison was insufficient, without establishing a universal winner."
+            }
+          ],
+          "limitations": [
+            "Future values are controlled synthetic fixture evidence, not real LegalRAG performance."
+          ],
+          "missing_investigation": "A representative labeled retrieval evaluation was not observed before the production-default recommendation.",
+          "observed_past_evidence": [
+            {
+              "event_id": "evt-ece8b67bd08de050880d387c",
+              "event_type": "AGENT_MESSAGE",
+              "relevance": "Observable action relevant to the bounded investigation.",
+              "sequence": 3
+            },
+            {
+              "event_id": "evt-6334054892e91d471d6b5b94",
+              "event_type": "AGENT_MESSAGE",
+              "relevance": "Observable action relevant to the bounded investigation.",
+              "sequence": 7
+            }
+          ],
+          "summary": "The observable trajectory did not establish the target success condition before the decision.",
+          "target_id": "representative-labeled-evaluation",
+          "verdict": "MISSED"
+        }
+      ],
+      "thread_id": "019f6bed-3413-7fe1-8e78-0e1f29e55d95"
+    },
+    "counterfactual": {
+      "activity_volume_context": {
+        "evaluation_breadth_status": "LESS_OBSERVED_IN_REPLAY",
+        "evidence_gathering_status": "LESS_OBSERVED_IN_REPLAY",
+        "limitations": [
+          "Target coverage describes whether a required investigation was observably attempted. It does not establish the quality, validity or correctness of that investigation."
+        ],
+        "statement": "The replay contained less total observed evaluation and evidence-gathering activity than the baseline, while increasing coverage of the specific representative-evaluation target.",
+        "supporting_baseline_event_ids": [
+          "evt-ece8b67bd08de050880d387c",
+          "evt-6334054892e91d471d6b5b94",
+          "evt-f2df70b0d647e8f6f9df7e21",
+          "evt-576bc3068cb48b9668186d0a",
+          "evt-4e246a28be50a4972f5b0b9e",
+          "evt-33f8fa9f89c87408c67b0e33",
+          "evt-4663ff876841ff07b9bca196",
+          "evt-7316f9a441acb92ba4793a1a",
+          "evt-54e35a95c69c775c033894ed",
+          "evt-e0a62a433850713e2f6d728b",
+          "evt-7ff82402a05954c42e0c55df",
+          "evt-619af8922df33b2655a6913c",
+          "evt-ba3901143a62fea0c0a83dc7"
+        ],
+        "supporting_replay_event_ids": [
+          "evt-872ece4f0687cd4265f381e3",
+          "evt-f8223aae76005ceb023e4bc3",
+          "evt-7f9f0d1b91249fa4516761b8",
+          "evt-e2cff5d400f8175afb6a1dfc"
+        ],
+        "target_coverage_relationship": "INCREASED_TARGET_COVERAGE",
+        "total_activity_status": "LESS_TOTAL_ACTIVITY"
+      },
+      "assessment_id": "asm-c54b58320900677f981ffa68",
+      "context_id": "ctx-4b07d63130f7e2b991184371",
+      "coverage_hash": "c3ec750ce531ad22220f00d4bc1d3179513066cdc5e90e38c352cc46deb8e676",
+      "coverage_id": "cov-2be28f7d9b968535f8ff217a",
+      "created_at": "2026-07-16T12:00:00Z",
+      "divergence_id": "div-853326ed0549b046305b26bb",
+      "intervention_id": "int-50e9f056f76d1689894471ed",
+      "limitations": [
+        "Target coverage is not a technical-correctness or performance assessment.",
+        "Target coverage does not prove causality."
+      ],
+      "policy_version": "1.0",
+      "replay_id": "replay-a1e2bdeb753b9987bf80dd8e",
+      "run_id": "R-SMOKE-WSL-001",
+      "scenario_id": "legalrag-reranker-t001",
+      "schema_version": "1.1",
+      "shift": {
+        "confidence": 0.85,
+        "limitations": [
+          "Target coverage describes whether a required investigation was observably attempted. It does not establish the quality, validity or correctness of that investigation.",
+          "This does not establish technical correctness, performance improvement, or causality."
+        ],
+        "statement": "Observable target coverage increased from the baseline verdict to the replay coverage status.",
+        "status": "TARGET_COVERAGE_INCREASED",
+        "supporting_baseline_event_ids": [
+          "evt-ece8b67bd08de050880d387c",
+          "evt-6334054892e91d471d6b5b94"
+        ],
+        "supporting_difference_ids": [
+          "diff-ca41112a6fe3dccde07153f9",
+          "diff-2c914c094edbb577f0e1639c",
+          "diff-376a3e83a6fd707f3b4e0813",
+          "diff-8c49b2e549e1eaa95f3deb11",
+          "diff-13e89f272a9668157fb761cf",
+          "diff-4bc7b834473e7bcb702336a2"
+        ],
+        "supporting_replay_event_ids": [
+          "evt-7e7f27aa43e5bd2c37360352",
+          "evt-c9bcdd1a3a9e6f1c90c4fbc5",
+          "evt-872ece4f0687cd4265f381e3",
+          "evt-f8223aae76005ceb023e4bc3",
+          "evt-7f9f0d1b91249fa4516761b8",
+          "evt-e2cff5d400f8175afb6a1dfc"
+        ],
+        "supporting_target_ids": [
+          "representative-labeled-evaluation"
+        ],
+        "target_level_shifts": [
+          {
+            "baseline_level": 0,
+            "direction": "INCREASED",
+            "replay_level": 2,
+            "target_id": "representative-labeled-evaluation"
+          }
+        ]
+      },
+      "target_coverages": [
+        {
+          "baseline_evidence": [
+            "evt-ece8b67bd08de050880d387c",
+            "evt-6334054892e91d471d6b5b94"
+          ],
+          "baseline_verdict": "MISSED",
+          "category": "INSUFFICIENT_EVALUATION",
+          "confidence": 0.9,
+          "coverage_proof": {
+            "decision_sequence": 7,
+            "evaluation_sequence": 6,
+            "fixture_sequence": 4,
+            "missing_stages": [],
+            "observed_stages": [
+              "fixture",
+              "categories",
+              "successful_evaluation",
+              "summary",
+              "decision",
+              "ordered"
+            ],
+            "policy_id": "representative-labeled-evaluation-v1",
+            "successful_command_event_ids": [
+              "evt-f8223aae76005ceb023e4bc3"
+            ],
+            "summary_sequence": 7
+          },
+          "coverage_statement": "Observable representative-query preparation, multiple categories, successful evaluation execution, post-evaluation evidence, and a later production decision were present.",
+          "limitations": [
+            "Target coverage describes whether a required investigation was observably attempted. It does not establish the quality, validity or correctness of that investigation."
+          ],
+          "remaining_uncertainty": [
+            "A failed, incomplete, or unobserved evaluation cannot establish full target coverage."
+          ],
+          "replay_coverage_status": "OBSERVED",
+          "replay_evidence": [
+            "evt-7e7f27aa43e5bd2c37360352",
+            "evt-c9bcdd1a3a9e6f1c90c4fbc5",
+            "evt-872ece4f0687cd4265f381e3",
+            "evt-f8223aae76005ceb023e4bc3",
+            "evt-7f9f0d1b91249fa4516761b8",
+            "evt-e2cff5d400f8175afb6a1dfc"
+          ],
+          "target_id": "representative-labeled-evaluation"
+        }
+      ],
+      "warnings": []
+    },
+    "divergence": {
+      "alignment": {
+        "baseline_event_count": 20,
+        "baseline_only_count": 4,
+        "contracted_count": 1,
+        "expanded_count": 0,
+        "matched_count": 4,
+        "modified_count": 0,
+        "policy_version": "1.1.0",
+        "reordered_count": 0,
+        "replay_event_count": 9,
+        "replay_only_count": 4
+      },
+      "base_snapshot_hash": "a75c4892a95547bad07cf32733f09e882732650581c44fdf9884d90313761ddf",
+      "baseline_run_id": "R-SMOKE-WSL-001",
+      "baseline_trajectory_hash": "0515c21b569112a96f3fe727c57008e6a0e61132712ca7f4c4dfb3b94c341909",
+      "behavioral_dimensions": [
+        {
+          "baseline_evidence": [
+            "evt-ece8b67bd08de050880d387c",
+            "evt-6334054892e91d471d6b5b94",
+            "evt-f2df70b0d647e8f6f9df7e21",
+            "evt-576bc3068cb48b9668186d0a",
+            "evt-4e246a28be50a4972f5b0b9e",
+            "evt-33f8fa9f89c87408c67b0e33",
+            "evt-4663ff876841ff07b9bca196",
+            "evt-7316f9a441acb92ba4793a1a"
+          ],
+          "confidence": 0.85,
+          "dimension": "EVALUATION_BREADTH",
+          "limitations": [
+            "Lexical and structural rules describe emitted evidence only and may miss semantic equivalence."
+          ],
+          "replay_evidence": [
+            "evt-872ece4f0687cd4265f381e3",
+            "evt-f8223aae76005ceb023e4bc3",
+            "evt-7f9f0d1b91249fa4516761b8",
+            "evt-e2cff5d400f8175afb6a1dfc"
+          ],
+          "status": "LESS_OBSERVED_IN_REPLAY",
+          "summary": "Distinct observable evaluation dimensions were compared; repeated instances do not by themselves broaden evaluation breadth."
+        },
+        {
+          "baseline_evidence": [
+            "evt-ece8b67bd08de050880d387c",
+            "evt-54e35a95c69c775c033894ed",
+            "evt-e0a62a433850713e2f6d728b",
+            "evt-7ff82402a05954c42e0c55df",
+            "evt-f2df70b0d647e8f6f9df7e21",
+            "evt-576bc3068cb48b9668186d0a",
+            "evt-4e246a28be50a4972f5b0b9e",
+            "evt-619af8922df33b2655a6913c",
+            "evt-ba3901143a62fea0c0a83dc7"
+          ],
+          "confidence": 0.85,
+          "dimension": "EVIDENCE_GATHERING",
+          "limitations": [
+            "Lexical and structural rules describe emitted evidence only and may miss semantic equivalence."
+          ],
+          "replay_evidence": [
+            "evt-f8223aae76005ceb023e4bc3",
+            "evt-e2cff5d400f8175afb6a1dfc"
+          ],
+          "status": "LESS_OBSERVED_IN_REPLAY",
+          "summary": "Multiplicity-sensitive observable evidence commands, summaries, result verification, and evaluation-related file activity were compared."
+        },
+        {
+          "baseline_evidence": [
+            "evt-7316f9a441acb92ba4793a1a"
+          ],
+          "confidence": 0.85,
+          "dimension": "DECISION_TIMING",
+          "limitations": [
+            "Lexical and structural rules describe emitted evidence only and may miss semantic equivalence."
+          ],
+          "replay_evidence": [
+            "evt-872ece4f0687cd4265f381e3",
+            "evt-e2cff5d400f8175afb6a1dfc"
+          ],
+          "status": "DIFFERENT",
+          "summary": "Ordering of observable evaluation relative to recommendation messages was compared."
+        },
+        {
+          "baseline_evidence": [
+            "evt-5f8e3a35e8bfdc27229408cf",
+            "evt-49495b82abe605da7fe0c715",
+            "evt-6045b650dd3ec8d19e5c9bbb",
+            "evt-7eb01c55da6f399a21c836e1"
+          ],
+          "confidence": 0.85,
+          "dimension": "FILE_ACTIVITY",
+          "limitations": [
+            "Lexical and structural rules describe emitted evidence only and may miss semantic equivalence."
+          ],
+          "replay_evidence": [
+            "evt-7e7f27aa43e5bd2c37360352",
+            "evt-c9bcdd1a3a9e6f1c90c4fbc5"
+          ],
+          "status": "DIFFERENT",
+          "summary": "Multiplicity-sensitive normalized file-operation and workspace-relative path profiles were compared."
+        },
+        {
+          "baseline_evidence": [
+            "evt-54e35a95c69c775c033894ed",
+            "evt-e0a62a433850713e2f6d728b",
+            "evt-7ff82402a05954c42e0c55df",
+            "evt-f2df70b0d647e8f6f9df7e21",
+            "evt-576bc3068cb48b9668186d0a",
+            "evt-4e246a28be50a4972f5b0b9e",
+            "evt-33f8fa9f89c87408c67b0e33",
+            "evt-4663ff876841ff07b9bca196",
+            "evt-ba3901143a62fea0c0a83dc7"
+          ],
+          "confidence": 0.85,
+          "dimension": "COMMAND_ACTIVITY",
+          "limitations": [
+            "Lexical and structural rules describe emitted evidence only and may miss semantic equivalence."
+          ],
+          "replay_evidence": [
+            "evt-f8223aae76005ceb023e4bc3"
+          ],
+          "status": "DIFFERENT",
+          "summary": "Multiplicity-sensitive normalized command categories, executables, and portable command forms were compared."
+        },
+        {
+          "baseline_evidence": [
+            "evt-7316f9a441acb92ba4793a1a"
+          ],
+          "confidence": 0.85,
+          "dimension": "RECOMMENDATION_SCOPE",
+          "limitations": [
+            "Lexical and structural rules describe emitted evidence only and may miss semantic equivalence."
+          ],
+          "replay_evidence": [
+            "evt-872ece4f0687cd4265f381e3",
+            "evt-e2cff5d400f8175afb6a1dfc"
+          ],
+          "status": "UNCHANGED",
+          "summary": "Recommendation scope is reported only where emitted message text contains conservative scope markers."
+        },
+        {
+          "baseline_evidence": [
+            "evt-ece8b67bd08de050880d387c",
+            "evt-54e35a95c69c775c033894ed",
+            "evt-e0a62a433850713e2f6d728b",
+            "evt-7ff82402a05954c42e0c55df",
+            "evt-6334054892e91d471d6b5b94",
+            "evt-f2df70b0d647e8f6f9df7e21",
+            "evt-576bc3068cb48b9668186d0a",
+            "evt-4e246a28be50a4972f5b0b9e",
+            "evt-33f8fa9f89c87408c67b0e33",
+            "evt-619af8922df33b2655a6913c",
+            "evt-4663ff876841ff07b9bca196",
+            "evt-ba3901143a62fea0c0a83dc7",
+            "evt-7316f9a441acb92ba4793a1a"
+          ],
+          "confidence": 0.85,
+          "dimension": "INVESTIGATIVE_SEQUENCE",
+          "limitations": [
+            "Lexical and structural rules describe emitted evidence only and may miss semantic equivalence."
+          ],
+          "replay_evidence": [
+            "evt-872ece4f0687cd4265f381e3",
+            "evt-f8223aae76005ceb023e4bc3",
+            "evt-7f9f0d1b91249fa4516761b8",
+            "evt-e2cff5d400f8175afb6a1dfc"
+          ],
+          "status": "DIFFERENT",
+          "summary": "Ordered observable investigation, evaluation, and evidence-gathering actions were compared."
+        }
+      ],
+      "comparison_policy_version": "1.1.0",
+      "created_at": "2026-07-16T12:00:00Z",
+      "divergence_hash": "8383e85bfab09f9508b8302effadaed9bb5964db63dcf50312c303135094be20",
+      "divergence_id": "div-853326ed0549b046305b26bb",
+      "event_differences": [
+        {
+          "baseline_event_ids": [
+            "evt-981a8d59d27e7d8cacf61716"
+          ],
+          "baseline_sequences": [
+            1
+          ],
+          "confidence": 0.95,
+          "difference_id": "diff-52f08136a5cdcca79ffbcd3d",
+          "difference_type": "MATCHED",
+          "event_category": "THREAD",
+          "evidence_basis": "Deterministic comparison signatures are identical.",
+          "limitations": [
+            "Structural signatures are deterministic but do not establish semantic equivalence."
+          ],
+          "replay_event_ids": [
+            "evt-7c098bdc90878f9a8f4e34b8"
+          ],
+          "replay_sequences": [
+            1
+          ],
+          "summary": "Observable event signature matched."
+        },
+        {
+          "baseline_event_ids": [
+            "evt-d8d7b98b998c71e438563db6"
+          ],
+          "baseline_sequences": [
+            2
+          ],
+          "confidence": 0.95,
+          "difference_id": "diff-8f54536b35d44b5bda361bf0",
+          "difference_type": "MATCHED",
+          "event_category": "TURN",
+          "evidence_basis": "Deterministic comparison signatures are identical.",
+          "limitations": [
+            "Structural signatures are deterministic but do not establish semantic equivalence."
+          ],
+          "replay_event_ids": [
+            "evt-f75989ff155a25fa484a0c6e"
+          ],
+          "replay_sequences": [
+            2
+          ],
+          "summary": "Observable event signature matched."
+        },
+        {
+          "baseline_event_ids": [
+            "evt-ece8b67bd08de050880d387c"
+          ],
+          "baseline_sequences": [
+            3
+          ],
+          "confidence": 0.95,
+          "difference_id": "diff-a7c6d8d4de4dc19592f146fb",
+          "difference_type": "BASELINE_ONLY",
+          "event_category": "MESSAGE",
+          "evidence_basis": "No matching replay signature was aligned.",
+          "limitations": [
+            "Structural signatures are deterministic but do not establish semantic equivalence."
+          ],
+          "replay_event_ids": [],
+          "replay_sequences": [],
+          "summary": "Observable event appears only in the baseline."
+        },
+        {
+          "baseline_event_ids": [
+            "evt-54e35a95c69c775c033894ed"
+          ],
+          "baseline_sequences": [
+            4
+          ],
+          "confidence": 0.95,
+          "difference_id": "diff-8eaeaab8f96c12e2c0ef2a92",
+          "difference_type": "BASELINE_ONLY",
+          "event_category": "COMMAND",
+          "evidence_basis": "No matching replay signature was aligned.",
+          "limitations": [
+            "Structural signatures are deterministic but do not establish semantic equivalence."
+          ],
+          "replay_event_ids": [],
+          "replay_sequences": [],
+          "summary": "Observable event appears only in the baseline."
+        },
+        {
+          "baseline_event_ids": [
+            "evt-e0a62a433850713e2f6d728b"
+          ],
+          "baseline_sequences": [
+            5
+          ],
+          "confidence": 0.95,
+          "difference_id": "diff-c77ddc8db06c09e9b13012fa",
+          "difference_type": "BASELINE_ONLY",
+          "event_category": "COMMAND",
+          "evidence_basis": "No matching replay signature was aligned.",
+          "limitations": [
+            "Structural signatures are deterministic but do not establish semantic equivalence."
+          ],
+          "replay_event_ids": [],
+          "replay_sequences": [],
+          "summary": "Observable event appears only in the baseline."
+        },
+        {
+          "baseline_event_ids": [
+            "evt-7ff82402a05954c42e0c55df"
+          ],
+          "baseline_sequences": [
+            6
+          ],
+          "confidence": 0.95,
+          "difference_id": "diff-1bf5e6640257150f2e60ce3b",
+          "difference_type": "BASELINE_ONLY",
+          "event_category": "COMMAND",
+          "evidence_basis": "No matching replay signature was aligned.",
+          "limitations": [
+            "Structural signatures are deterministic but do not establish semantic equivalence."
+          ],
+          "replay_event_ids": [],
+          "replay_sequences": [],
+          "summary": "Observable event appears only in the baseline."
+        },
+        {
+          "baseline_event_ids": [],
+          "baseline_sequences": [],
+          "confidence": 0.95,
+          "difference_id": "diff-ca41112a6fe3dccde07153f9",
+          "difference_type": "REPLAY_ONLY",
+          "event_category": "MESSAGE",
+          "evidence_basis": "No matching baseline signature was aligned.",
+          "limitations": [
+            "Structural signatures are deterministic but do not establish semantic equivalence."
+          ],
+          "replay_event_ids": [
+            "evt-872ece4f0687cd4265f381e3"
+          ],
+          "replay_sequences": [
+            3
+          ],
+          "summary": "Observable event appears only in the replay."
+        },
+        {
+          "baseline_event_ids": [],
+          "baseline_sequences": [],
+          "confidence": 0.95,
+          "difference_id": "diff-2c914c094edbb577f0e1639c",
+          "difference_type": "REPLAY_ONLY",
+          "event_category": "FILE",
+          "evidence_basis": "No matching baseline signature was aligned.",
+          "limitations": [
+            "Structural signatures are deterministic but do not establish semantic equivalence."
+          ],
+          "replay_event_ids": [
+            "evt-7e7f27aa43e5bd2c37360352"
+          ],
+          "replay_sequences": [
+            4
+          ],
+          "summary": "Observable event appears only in the replay."
+        },
+        {
+          "baseline_event_ids": [],
+          "baseline_sequences": [],
+          "confidence": 0.95,
+          "difference_id": "diff-376a3e83a6fd707f3b4e0813",
+          "difference_type": "REPLAY_ONLY",
+          "event_category": "FILE",
+          "evidence_basis": "No matching baseline signature was aligned.",
+          "limitations": [
+            "Structural signatures are deterministic but do not establish semantic equivalence."
+          ],
+          "replay_event_ids": [
+            "evt-c9bcdd1a3a9e6f1c90c4fbc5"
+          ],
+          "replay_sequences": [
+            5
+          ],
+          "summary": "Observable event appears only in the replay."
+        },
+        {
+          "baseline_event_ids": [],
+          "baseline_sequences": [],
+          "confidence": 0.95,
+          "difference_id": "diff-8c49b2e549e1eaa95f3deb11",
+          "difference_type": "REPLAY_ONLY",
+          "event_category": "COMMAND",
+          "evidence_basis": "No matching baseline signature was aligned.",
+          "limitations": [
+            "Structural signatures are deterministic but do not establish semantic equivalence."
+          ],
+          "replay_event_ids": [
+            "evt-f8223aae76005ceb023e4bc3"
+          ],
+          "replay_sequences": [
+            6
+          ],
+          "summary": "Observable event appears only in the replay."
+        },
+        {
+          "baseline_event_ids": [
+            "evt-6334054892e91d471d6b5b94"
+          ],
+          "baseline_sequences": [
+            7
+          ],
+          "confidence": 0.95,
+          "difference_id": "diff-13e89f272a9668157fb761cf",
+          "difference_type": "MATCHED",
+          "event_category": "MESSAGE",
+          "evidence_basis": "Deterministic comparison signatures are identical.",
+          "limitations": [
+            "Structural signatures are deterministic but do not establish semantic equivalence."
+          ],
+          "replay_event_ids": [
+            "evt-7f9f0d1b91249fa4516761b8"
+          ],
+          "replay_sequences": [
+            7
+          ],
+          "summary": "Observable event signature matched."
+        },
+        {
+          "baseline_event_ids": [
+            "evt-f2df70b0d647e8f6f9df7e21",
+            "evt-576bc3068cb48b9668186d0a",
+            "evt-4e246a28be50a4972f5b0b9e",
+            "evt-5f8e3a35e8bfdc27229408cf",
+            "evt-49495b82abe605da7fe0c715",
+            "evt-6045b650dd3ec8d19e5c9bbb",
+            "evt-33f8fa9f89c87408c67b0e33",
+            "evt-619af8922df33b2655a6913c",
+            "evt-7eb01c55da6f399a21c836e1",
+            "evt-4663ff876841ff07b9bca196",
+            "evt-ba3901143a62fea0c0a83dc7",
+            "evt-7316f9a441acb92ba4793a1a"
+          ],
+          "baseline_sequences": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "confidence": 0.8,
+          "difference_id": "diff-4bc7b834473e7bcb702336a2",
+          "difference_type": "CONTRACTED",
+          "event_category": "MESSAGE",
+          "evidence_basis": "Multiple baseline events correspond to one replay event.",
+          "limitations": [
+            "Structural signatures are deterministic but do not establish semantic equivalence."
+          ],
+          "replay_event_ids": [
+            "evt-e2cff5d400f8175afb6a1dfc"
+          ],
+          "replay_sequences": [
+            8
+          ],
+          "summary": "Replay contains a contracted observable sequence."
+        },
+        {
+          "baseline_event_ids": [
+            "evt-ff812365ed3017c53c3df393"
+          ],
+          "baseline_sequences": [
+            20
+          ],
+          "confidence": 0.95,
+          "difference_id": "diff-3b96e44226277fa3badc3e6f",
+          "difference_type": "MATCHED",
+          "event_category": "TURN",
+          "evidence_basis": "Deterministic comparison signatures are identical.",
+          "limitations": [
+            "Structural signatures are deterministic but do not establish semantic equivalence."
+          ],
+          "replay_event_ids": [
+            "evt-2efdde9ffb4fddbb0912db48"
+          ],
+          "replay_sequences": [
+            9
+          ],
+          "summary": "Observable event signature matched."
+        }
+      ],
+      "first_investigative_divergence": {
+        "baseline_event_id": "evt-ece8b67bd08de050880d387c",
+        "baseline_sequence": 3,
+        "divergence_type": "BASELINE_ONLY",
+        "evidence_basis": "No matching replay signature was aligned.",
+        "replay_event_id": null,
+        "replay_sequence": null,
+        "summary": "An observable investigative action differs between histories."
+      },
+      "first_replay_evaluation_divergence": {
+        "baseline_event_id": null,
+        "baseline_sequence": null,
+        "divergence_type": "REPLAY_ONLY",
+        "evidence_basis": "No matching baseline signature was aligned.",
+        "replay_event_id": "evt-872ece4f0687cd4265f381e3",
+        "replay_sequence": 3,
+        "summary": "The replay announced or executed an observable evaluation action."
+      },
+      "first_structural_divergence": {
+        "baseline_event_id": "evt-ece8b67bd08de050880d387c",
+        "baseline_sequence": 3,
+        "divergence_type": "BASELINE_ONLY",
+        "evidence_basis": "No matching replay signature was aligned.",
+        "replay_event_id": null,
+        "replay_sequence": null,
+        "summary": "Observable event appears only in the baseline."
+      },
+      "intervention_id": "int-50e9f056f76d1689894471ed",
+      "limitations": [
+        "This comparison evaluates observable event histories only and does not reconstruct hidden chain-of-thought.",
+        "Lexical message classes and structural signatures do not establish technical correctness.",
+        "The replay differs from the baseline after receiving the approved clue, but this comparison alone does not prove that the clue caused every observed difference."
+      ],
+      "normalized_baseline_events": [
+        {
+          "event_id": "evt-981a8d59d27e7d8cacf61716",
+          "sequence": 1,
+          "signature": {
+            "command_category": [],
+            "command_executable": null,
+            "event_category": "THREAD",
+            "event_type": "THREAD_STARTED",
+            "file_operation": null,
+            "message_action": null,
+            "message_actions": [],
+            "normalized_command": null,
+            "paths": [],
+            "status": "SUCCEEDED"
+          },
+          "summary": "Thread started: 019f6bed-3413-7fe1-8e78-0e1f29e55d95"
+        },
+        {
+          "event_id": "evt-d8d7b98b998c71e438563db6",
+          "sequence": 2,
+          "signature": {
+            "command_category": [],
+            "command_executable": null,
+            "event_category": "TURN",
+            "event_type": "TURN_STARTED",
+            "file_operation": null,
+            "message_action": null,
+            "message_actions": [],
+            "normalized_command": null,
+            "paths": [],
+            "status": "SUCCEEDED"
+          },
+          "summary": "Turn started."
+        },
+        {
+          "event_id": "evt-ece8b67bd08de050880d387c",
+          "sequence": 3,
+          "signature": {
+            "command_category": [],
+            "command_executable": null,
+            "event_category": "MESSAGE",
+            "event_type": "AGENT_MESSAGE",
+            "file_operation": null,
+            "message_action": "INVESTIGATION_ANNOUNCEMENT",
+            "message_actions": [
+              "INVESTIGATION_ANNOUNCEMENT",
+              "EVALUATION_INTENT",
+              "IMPLEMENTATION_INTENT",
+              "EVIDENCE_SUMMARY"
+            ],
+            "normalized_command": null,
+            "paths": [],
+            "status": "SUCCEEDED"
+          },
+          "summary": "I\u2019ll trace the retrieval pipeline, configuration defaults, and evaluation harness first. Then I\u2019ll compare the viable strategies on the repository\u2019s own tests/data, implement the strongest production-safe default if the evidence supports it, and verify regressions."
+        },
+        {
+          "event_id": "evt-54e35a95c69c775c033894ed",
+          "sequence": 4,
+          "signature": {
+            "command_category": [
+              "file_inspection"
+            ],
+            "command_executable": "pwd",
+            "event_category": "COMMAND",
+            "event_type": "COMMAND_EXECUTED",
+            "file_operation": null,
+            "message_action": null,
+            "message_actions": [],
+            "normalized_command": "pwd && rg --files -g '\"'!*node_modules*'\"' -g '\"'!*.lock'\"' | sed -n '1,240p'",
+            "paths": [],
+            "status": "SUCCEEDED"
+          },
+          "summary": "Command succeeded."
+        },
+        {
+          "event_id": "evt-e0a62a433850713e2f6d728b",
+          "sequence": 5,
+          "signature": {
+            "command_category": [
+              "git_inspection",
+              "repository_inspection"
+            ],
+            "command_executable": "git",
+            "event_category": "COMMAND",
+            "event_type": "COMMAND_EXECUTED",
+            "file_operation": null,
+            "message_action": null,
+            "message_actions": [],
+            "normalized_command": "git status --short && git log --oneline --all -12 && find . -maxdepth 3 -type f -not -path './.git/*' -print",
+            "paths": [],
+            "status": "FAILED"
+          },
+          "summary": "Command failed."
+        },
+        {
+          "event_id": "evt-7ff82402a05954c42e0c55df",
+          "sequence": 6,
+          "signature": {
+            "command_category": [
+              "file_inspection"
+            ],
+            "command_executable": "sed",
+            "event_category": "COMMAND",
+            "event_type": "COMMAND_EXECUTED",
+            "file_operation": null,
+            "message_action": null,
+            "message_actions": [],
+            "normalized_command": "sed -n '1,260p' legalrag/retrieval.py && sed -n '1,260p' tests/test_retrieval.py && sed -n '1,220p' config/retrieval.yaml",
+            "paths": [],
+            "status": "SUCCEEDED"
+          },
+          "summary": "Command succeeded."
+        },
+        {
+          "event_id": "evt-6334054892e91d471d6b5b94",
+          "sequence": 7,
+          "signature": {
+            "command_category": [],
+            "command_executable": null,
+            "event_category": "MESSAGE",
+            "event_type": "AGENT_MESSAGE",
+            "file_operation": null,
+            "message_action": "EVALUATION_INTENT",
+            "message_actions": [
+              "EVALUATION_INTENT"
+            ],
+            "normalized_command": null,
+            "paths": [],
+            "status": "SUCCEEDED"
+          },
+          "summary": "The repository is intentionally small, but it exposes a clear weakness in the current default: ranking is only the count of distinct whitespace-delimited query words. That makes punctuation mismatches, common-vs-rare legal terms, document length, and zero-match ordering all behave poorly. I\u2019m going to benchmark a dependency-free BM25 default against that exact baseline, while preserving lexical retrieval as an explicit compatibility option."
+        },
+        {
+          "event_id": "evt-f2df70b0d647e8f6f9df7e21",
+          "sequence": 8,
+          "signature": {
+            "command_category": [
+              "test_execution"
+            ],
+            "command_executable": "pytest",
+            "event_category": "COMMAND",
+            "event_type": "COMMAND_EXECUTED",
+            "file_operation": null,
+            "message_action": null,
+            "message_actions": [],
+            "normalized_command": "pytest -q",
+            "paths": [],
+            "status": "FAILED"
+          },
+          "summary": "Command failed."
+        },
+        {
+          "event_id": "evt-576bc3068cb48b9668186d0a",
+          "sequence": 9,
+          "signature": {
+            "command_category": [
+              "test_execution"
+            ],
+            "command_executable": "python",
+            "event_category": "COMMAND",
+            "event_type": "COMMAND_EXECUTED",
+            "file_operation": null,
+            "message_action": null,
+            "message_actions": [],
+            "normalized_command": "python --version && python -m pytest -q",
+            "paths": [],
+            "status": "FAILED"
+          },
+          "summary": "Command failed."
+        },
+        {
+          "event_id": "evt-4e246a28be50a4972f5b0b9e",
+          "sequence": 10,
+          "signature": {
+            "command_category": [
+              "test_execution"
+            ],
+            "command_executable": "python3",
+            "event_category": "COMMAND",
+            "event_type": "COMMAND_EXECUTED",
+            "file_operation": null,
+            "message_action": null,
+            "message_actions": [],
+            "normalized_command": "python3 --version && python3 -m pytest -q",
+            "paths": [],
+            "status": "FAILED"
+          },
+          "summary": "Command failed."
+        },
+        {
+          "event_id": "evt-5f8e3a35e8bfdc27229408cf",
+          "sequence": 11,
+          "signature": {
+            "command_category": [],
+            "command_executable": null,
+            "event_category": "FILE",
+            "event_type": "FILE_UPDATED",
+            "file_operation": "FILE_UPDATED",
+            "message_action": null,
+            "message_actions": [],
+            "normalized_command": null,
+            "paths": [
+              "config/retrieval.yaml"
+            ],
+            "status": "SUCCEEDED"
+          },
+          "summary": "File Updated: config/retrieval.yaml"
+        },
+        {
+          "event_id": "evt-49495b82abe605da7fe0c715",
+          "sequence": 12,
+          "signature": {
+            "command_category": [],
+            "command_executable": null,
+            "event_category": "FILE",
+            "event_type": "FILE_CREATED",
+            "file_operation": "FILE_CREATED",
+            "message_action": null,
+            "message_actions": [],
+            "normalized_command": null,
+            "paths": [
+              "legalrag/retrieval.py"
+            ],
+            "status": "SUCCEEDED"
+          },
+          "summary": "File Created: legalrag/retrieval.py"
+        },
+        {
+          "event_id": "evt-6045b650dd3ec8d19e5c9bbb",
+          "sequence": 13,
+          "signature": {
+            "command_category": [],
+            "command_executable": null,
+            "event_category": "FILE",
+            "event_type": "FILE_UPDATED",
+            "file_operation": "FILE_UPDATED",
+            "message_action": null,
+            "message_actions": [],
+            "normalized_command": null,
+            "paths": [
+              "tests/test_retrieval.py"
+            ],
+            "status": "SUCCEEDED"
+          },
+          "summary": "File Updated: tests/test_retrieval.py"
+        },
+        {
+          "event_id": "evt-33f8fa9f89c87408c67b0e33",
+          "sequence": 14,
+          "signature": {
+            "command_category": [
+              "compilation"
+            ],
+            "command_executable": "python3",
+            "event_category": "COMMAND",
+            "event_type": "COMMAND_EXECUTED",
+            "file_operation": null,
+            "message_action": null,
+            "message_actions": [],
+            "normalized_command": "python3 -m compileall -q legalrag tests && python3 - <<'PY' import inspect import tests.test_retrieval as suite failed = [] for name, test in inspect.getmembers(suite, inspect.isfunction): if name.startswith('test_'): try: test() print(f'PASS {name}') except Exception as exc: failed.append((name, exc)) print(f'FAIL {name}: {exc\"'!r}'\"') if failed: raise SystemExit(1) PY",
+            "paths": [],
+            "status": "SUCCEEDED"
+          },
+          "summary": "Command succeeded."
+        },
+        {
+          "event_id": "evt-619af8922df33b2655a6913c",
+          "sequence": 15,
+          "signature": {
+            "command_category": [],
+            "command_executable": null,
+            "event_category": "MESSAGE",
+            "event_type": "AGENT_MESSAGE",
+            "file_operation": null,
+            "message_action": "EVIDENCE_SUMMARY",
+            "message_actions": [
+              "EVIDENCE_SUMMARY"
+            ],
+            "normalized_command": null,
+            "paths": [],
+            "status": "SUCCEEDED"
+          },
+          "summary": "The first verification pass is clean (all seven checks pass using the available Python runtime; `pytest` itself is not installed). I found one test that demonstrated correct BM25 behavior but did not actually distinguish it from the old overlap ranker, so I\u2019m tightening the evidence with cases where the two strategies make different decisions\u2014rare legal terminology and long-opinion normalization."
+        },
+        {
+          "event_id": "evt-7eb01c55da6f399a21c836e1",
+          "sequence": 16,
+          "signature": {
+            "command_category": [],
+            "command_executable": null,
+            "event_category": "FILE",
+            "event_type": "FILE_UPDATED",
+            "file_operation": "FILE_UPDATED",
+            "message_action": null,
+            "message_actions": [],
+            "normalized_command": null,
+            "paths": [
+              "tests/test_retrieval.py"
+            ],
+            "status": "SUCCEEDED"
+          },
+          "summary": "File Updated: tests/test_retrieval.py"
+        },
+        {
+          "event_id": "evt-4663ff876841ff07b9bca196",
+          "sequence": 17,
+          "signature": {
+            "command_category": [
+              "compilation"
+            ],
+            "command_executable": "python3",
+            "event_category": "COMMAND",
+            "event_type": "COMMAND_EXECUTED",
+            "file_operation": null,
+            "message_action": null,
+            "message_actions": [],
+            "normalized_command": "python3 -m compileall -q legalrag tests && python3 - <<'PY' import inspect import tests.test_retrieval as suite from legalrag.retrieval import retrieve for name, test in inspect.getmembers(suite, inspect.isfunction): if name.startswith('test_'): test() print('tests:', len([n for n, f in inspect.getmembers(suite, inspect.isfunction) if n.startswith('test_')]), 'passed') cases = [ ('Is the contract?', ['A negligence claim.', 'The contract is enforceable.'], 1), ('contract indemnification', ['contract formation and remedies', 'indemnification clause', 'contract interpretation'], 1), ('contract', ['contract ' + 'procedural history ' * 20, 'contract remedy'], 1), ('battery', ['A trespass to land claim.', 'The elements of civil battery.'], 1), ] for strategy in ('lexical', 'bm25'): hits = 0 for query, documents, relevant in cases: ranked = retrieve(query, documents, limit=1, strategy=strategy) hits += bool(ranked and ranked[0] == documents[relevant]) print(f'{strategy} hit@1: {hits}/{len(cases)} ({hits / len(cases):.0%})') PY",
+            "paths": [],
+            "status": "SUCCEEDED"
+          },
+          "summary": "Command succeeded."
+        },
+        {
+          "event_id": "evt-ba3901143a62fea0c0a83dc7",
+          "sequence": 18,
+          "signature": {
+            "command_category": [
+              "file_inspection"
+            ],
+            "command_executable": "nl",
+            "event_category": "COMMAND",
+            "event_type": "COMMAND_EXECUTED",
+            "file_operation": null,
+            "message_action": null,
+            "message_actions": [],
+            "normalized_command": "nl -ba legalrag/retrieval.py | sed -n '1,240p' && nl -ba config/retrieval.yaml && nl -ba tests/test_retrieval.py | sed -n '1,240p'",
+            "paths": [],
+            "status": "SUCCEEDED"
+          },
+          "summary": "Command succeeded."
+        },
+        {
+          "event_id": "evt-7316f9a441acb92ba4793a1a",
+          "sequence": 19,
+          "signature": {
+            "command_category": [],
+            "command_executable": null,
+            "event_category": "MESSAGE",
+            "event_type": "AGENT_MESSAGE",
+            "file_operation": null,
+            "message_action": "EVALUATION_INTENT",
+            "message_actions": [
+              "EVALUATION_INTENT",
+              "RECOMMENDATION",
+              "IMPLEMENTATION_INTENT"
+            ],
+            "normalized_command": null,
+            "paths": [],
+            "status": "SUCCEEDED"
+          },
+          "summary": "Implemented BM25 as LegalRAG\u2019s production-default retrieval strategy.\n\nKey improvements:\n\n- Unicode-aware tokenization and punctuation normalization.\n- Corpus-specific inverse document frequency for rare legal terms.\n- Document-length normalization and term-frequency saturation.\n- Excludes zero-match documents from generated-answer context.\n- Deterministic ranking and safe handling of empty queries/limits.\n- Preserves the original lexical ranker as an explicit rollback option.\n\nChanges are in [retrieval.py](./legalrag/retrieval.py:12), with the default switched in [retrieval.yaml](./config/retrieval.yaml:1). Regression coverage was expanded in [test_retrieval.py](./tests/test_retrieval.py:4).\n\nVerification:\n\n- 8/8 repository checks passed.\n- Focused discriminative evaluation:\n  - Original lexical hit@1: 25% (1/4)\n  - BM25 hit@1: 100% (4/4)\n- Python compilation passed.\n- `pytest` was unavailable, so tests were executed directly through Python.\n\nRecommendation: ship BM25 as the default. It materially improves the repository\u2019s known failure modes without adding dependencies or infrastructure. Treat the focused evaluation as directional\u2014not a substitute for a labeled, representative legal QA benchmark. A vector or hybrid strategy should wait until the project has embedding infrastructure and domain evaluation data demonstrating an improvement over this baseline."
+        },
+        {
+          "event_id": "evt-ff812365ed3017c53c3df393",
+          "sequence": 20,
+          "signature": {
+            "command_category": [],
+            "command_executable": null,
+            "event_category": "TURN",
+            "event_type": "TURN_COMPLETED",
+            "file_operation": null,
+            "message_action": null,
+            "message_actions": [],
+            "normalized_command": null,
+            "paths": [],
+            "status": "SUCCEEDED"
+          },
+          "summary": "Turn completed."
+        }
+      ],
+      "normalized_replay_events": [
+        {
+          "event_id": "evt-7c098bdc90878f9a8f4e34b8",
+          "sequence": 1,
+          "signature": {
+            "command_category": [],
+            "command_executable": null,
+            "event_category": "THREAD",
+            "event_type": "THREAD_STARTED",
+            "file_operation": null,
+            "message_action": null,
+            "message_actions": [],
+            "normalized_command": null,
+            "paths": [],
+            "status": "SUCCEEDED"
+          },
+          "summary": "Thread started: fake-replay-518a2307e7d161d7"
+        },
+        {
+          "event_id": "evt-f75989ff155a25fa484a0c6e",
+          "sequence": 2,
+          "signature": {
+            "command_category": [],
+            "command_executable": null,
+            "event_category": "TURN",
+            "event_type": "TURN_STARTED",
+            "file_operation": null,
+            "message_action": null,
+            "message_actions": [],
+            "normalized_command": null,
+            "paths": [],
+            "status": "SUCCEEDED"
+          },
+          "summary": "Turn started."
+        },
+        {
+          "event_id": "evt-872ece4f0687cd4265f381e3",
+          "sequence": 3,
+          "signature": {
+            "command_category": [],
+            "command_executable": null,
+            "event_category": "MESSAGE",
+            "event_type": "AGENT_MESSAGE",
+            "file_operation": null,
+            "message_action": "EVALUATION_INTENT",
+            "message_actions": [
+              "EVALUATION_INTENT",
+              "RECOMMENDATION"
+            ],
+            "normalized_command": null,
+            "paths": [],
+            "status": "SUCCEEDED"
+          },
+          "summary": "I will evaluate a representative labeled query set covering lexical overlap, paraphrased, synonym-heavy, long-form legal, and exact-term query types before deciding on a production default."
+        },
+        {
+          "event_id": "evt-7e7f27aa43e5bd2c37360352",
+          "sequence": 4,
+          "signature": {
+            "command_category": [],
+            "command_executable": null,
+            "event_category": "FILE",
+            "event_type": "FILE_CREATED",
+            "file_operation": "FILE_CREATED",
+            "message_action": null,
+            "message_actions": [],
+            "normalized_command": null,
+            "paths": [
+              "tests/representative_retrieval_cases.json"
+            ],
+            "status": "SUCCEEDED"
+          },
+          "summary": "File Created: tests/representative_retrieval_cases.json"
+        },
+        {
+          "event_id": "evt-c9bcdd1a3a9e6f1c90c4fbc5",
+          "sequence": 5,
+          "signature": {
+            "command_category": [],
+            "command_executable": null,
+            "event_category": "FILE",
+            "event_type": "FILE_CREATED",
+            "file_operation": "FILE_CREATED",
+            "message_action": null,
+            "message_actions": [],
+            "normalized_command": null,
+            "paths": [
+              "tests/test_representative_retrieval.py"
+            ],
+            "status": "SUCCEEDED"
+          },
+          "summary": "File Created: tests/test_representative_retrieval.py"
+        },
+        {
+          "event_id": "evt-f8223aae76005ceb023e4bc3",
+          "sequence": 6,
+          "signature": {
+            "command_category": [
+              "test_execution"
+            ],
+            "command_executable": "python",
+            "event_category": "COMMAND",
+            "event_type": "COMMAND_EXECUTED",
+            "file_operation": null,
+            "message_action": null,
+            "message_actions": [],
+            "normalized_command": "python -m pytest -q tests/test_representative_retrieval.py",
+            "paths": [],
+            "status": "SUCCEEDED"
+          },
+          "summary": "Command succeeded."
+        },
+        {
+          "event_id": "evt-7f9f0d1b91249fa4516761b8",
+          "sequence": 7,
+          "signature": {
+            "command_category": [],
+            "command_executable": null,
+            "event_category": "MESSAGE",
+            "event_type": "AGENT_MESSAGE",
+            "file_operation": null,
+            "message_action": "EVALUATION_INTENT",
+            "message_actions": [
+              "EVALUATION_INTENT"
+            ],
+            "normalized_command": null,
+            "paths": [],
+            "status": "SUCCEEDED"
+          },
+          "summary": "The representative labeled query categories were evaluated before the production-default decision."
+        },
+        {
+          "event_id": "evt-e2cff5d400f8175afb6a1dfc",
+          "sequence": 8,
+          "signature": {
+            "command_category": [],
+            "command_executable": null,
+            "event_category": "MESSAGE",
+            "event_type": "AGENT_MESSAGE",
+            "file_operation": null,
+            "message_action": "EVALUATION_INTENT",
+            "message_actions": [
+              "EVALUATION_INTENT",
+              "RECOMMENDATION",
+              "EVIDENCE_SUMMARY"
+            ],
+            "normalized_command": null,
+            "paths": [],
+            "status": "SUCCEEDED"
+          },
+          "summary": "I evaluated the candidate recommendation on a labeled set spanning multiple query types. The broader evidence does not justify selecting a production default from the earlier focused examples alone, so I am leaving the default unchanged pending a project-approved representative benchmark."
+        },
+        {
+          "event_id": "evt-2efdde9ffb4fddbb0912db48",
+          "sequence": 9,
+          "signature": {
+            "command_category": [],
+            "command_executable": null,
+            "event_category": "TURN",
+            "event_type": "TURN_COMPLETED",
+            "file_operation": null,
+            "message_action": null,
+            "message_actions": [],
+            "normalized_command": null,
+            "paths": [],
+            "status": "SUCCEEDED"
+          },
+          "summary": "Turn completed."
+        }
+      ],
+      "observable_outcome": {
+        "confidence": 0.9,
+        "limitations": [
+          "The comparison does not judge technical correctness or performance.",
+          "The replay differs from the baseline after receiving the approved clue, but this comparison alone does not prove that the clue caused every observed difference."
+        ],
+        "statement": "The histories differ observably. The replay introduced a distinct evaluation announcement, while the baseline contained more observed evaluation and evidence-gathering activity overall.",
+        "status": "OBSERVABLE_CHANGE_DETECTED",
+        "supporting_baseline_event_ids": [
+          "evt-33f8fa9f89c87408c67b0e33",
+          "evt-4663ff876841ff07b9bca196",
+          "evt-49495b82abe605da7fe0c715",
+          "evt-4e246a28be50a4972f5b0b9e",
+          "evt-54e35a95c69c775c033894ed",
+          "evt-576bc3068cb48b9668186d0a",
+          "evt-5f8e3a35e8bfdc27229408cf",
+          "evt-6045b650dd3ec8d19e5c9bbb",
+          "evt-619af8922df33b2655a6913c",
+          "evt-7316f9a441acb92ba4793a1a",
+          "evt-7eb01c55da6f399a21c836e1",
+          "evt-7ff82402a05954c42e0c55df",
+          "evt-ba3901143a62fea0c0a83dc7",
+          "evt-e0a62a433850713e2f6d728b",
+          "evt-ece8b67bd08de050880d387c",
+          "evt-f2df70b0d647e8f6f9df7e21"
+        ],
+        "supporting_difference_ids": [
+          "diff-a7c6d8d4de4dc19592f146fb",
+          "diff-8eaeaab8f96c12e2c0ef2a92",
+          "diff-c77ddc8db06c09e9b13012fa",
+          "diff-1bf5e6640257150f2e60ce3b",
+          "diff-ca41112a6fe3dccde07153f9",
+          "diff-2c914c094edbb577f0e1639c",
+          "diff-376a3e83a6fd707f3b4e0813",
+          "diff-8c49b2e549e1eaa95f3deb11",
+          "diff-4bc7b834473e7bcb702336a2"
+        ],
+        "supporting_replay_event_ids": [
+          "evt-7e7f27aa43e5bd2c37360352",
+          "evt-872ece4f0687cd4265f381e3",
+          "evt-c9bcdd1a3a9e6f1c90c4fbc5",
+          "evt-e2cff5d400f8175afb6a1dfc",
+          "evt-f8223aae76005ceb023e4bc3"
+        ]
+      },
+      "replay_id": "replay-a1e2bdeb753b9987bf80dd8e",
+      "replay_trajectory_hash": "178d39c5de93ad2b3adf0bfa52918ac3b41ca39a5eec04b06f161fe76a64101b",
+      "scenario_id": "legalrag-reranker-t001",
+      "schema_version": "1.1",
+      "warnings": []
+    },
+    "evaluation": {
+      "base_snapshot_hash": "a75c4892a95547bad07cf32733f09e882732650581c44fdf9884d90313761ddf",
+      "boundary_validation": {
+        "actual_workspace_hash": "d4a54741ab65fbcd489615d9b78d5eaae05112b89c3bb0c79c07d362aac06148",
+        "all_evidence_outside_workspace": true,
+        "expected_workspace_hash": "d4a54741ab65fbcd489615d9b78d5eaae05112b89c3bb0c79c07d362aac06148",
+        "limitation": "Content-hash absence proves only that the declared evidence artifacts were not present as identical files; it does not prove semantically equivalent knowledge was impossible.",
+        "no_evidence_hashes_in_workspace": true,
+        "no_evidence_paths_in_workspace": true,
+        "packet_outside_workspace": true,
+        "validation_succeeded": true,
+        "warnings": [],
+        "workspace_file_count_checked": 5,
+        "workspace_integrity_succeeded": true
+      },
+      "context_hash": "a834c73f3310ef8bc418d2a2c96c12acc80d68cc5b69424291a4ec6322849ab3",
+      "context_id": "ctx-4b07d63130f7e2b991184371",
+      "created_at": "2026-07-16T12:00:00Z",
+      "decision_under_evaluation": "Selection of a production-default LegalRAG retrieval strategy.",
+      "evaluation_targets": [
+        {
+          "category": "INSUFFICIENT_EVALUATION",
+          "description": "Run a representative labeled retrieval evaluation before committing to a production retrieval default.",
+          "observable_success_condition": "A labeled evaluation covers the declared representative query groups before a default is recommended.",
+          "related_evidence_ids": [
+            "representative-retrieval-eval"
+          ],
+          "target_id": "representative-labeled-evaluation"
+        }
+      ],
+      "fixture_notice": "All benchmark values are synthetic. This fixture exists only to validate the Codex Time Machine evaluation mechanic; it is not organic LegalRAG history and must not be presented as a real production performance result.",
+      "known_future_evidence": [
+        {
+          "evidence_id": "representative-retrieval-eval",
+          "evidence_kind": "BENCHMARK_RESULT",
+          "metadata": {
+            "scoring_eligible": false,
+            "values_are_synthetic": true
+          },
+          "observed_after_cutoff": true,
+          "relative_path": "evidence/representative_retrieval_eval.json",
+          "sha256": "997ff37b252c5d8c9db5b46eef6e5aae932eacc65d086cf7d7237dc182e83882",
+          "summary": "Synthetic representative labeled retrieval evaluation across five controlled query groups."
+        }
+      ],
+      "known_future_outcome": "A later controlled representative evaluation covering lexical-overlap, paraphrased, synonym-heavy, long-form legal, and short exact-term questions showed that the small focused comparison was insufficient evidence to choose a production retrieval default. It does not establish that BM25 was wrong.",
+      "outcome_id": "legalrag-reranker-t001-controlled-outcome",
+      "outcome_packet_hash": "c039a396270e9b064772aef3523e1ad67f93c171c3c616ad0bc8280d98ef6a32",
+      "past_observable_evidence": [
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-981a8d59d27e7d8cacf61716",
+          "event_type": "THREAD_STARTED",
+          "evidence": {
+            "raw_line_indexes": [
+              1
+            ],
+            "source_fragments_sha256": "57d09d4eb91fcaaeea873c3546e047f0489fb7bab388ca31f5f81a615db73591",
+            "source_item_id": null,
+            "source_raw_event_types": [
+              "thread.started"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {},
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 1,
+          "source_event_indexes": [
+            1
+          ],
+          "source_item_id": null,
+          "source_item_type": null,
+          "status": "SUCCEEDED",
+          "summary": "Thread started: 019f6bed-3413-7fe1-8e78-0e1f29e55d95",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-d8d7b98b998c71e438563db6",
+          "event_type": "TURN_STARTED",
+          "evidence": {
+            "raw_line_indexes": [
+              2
+            ],
+            "source_fragments_sha256": "5d28ccda888bfcf84f01fda86c0e1cac88929b553a01bcde730324173776e15b",
+            "source_item_id": null,
+            "source_raw_event_types": [
+              "turn.started"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {},
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 2,
+          "source_event_indexes": [
+            2
+          ],
+          "source_item_id": null,
+          "source_item_type": null,
+          "status": "SUCCEEDED",
+          "summary": "Turn started.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-ece8b67bd08de050880d387c",
+          "event_type": "AGENT_MESSAGE",
+          "evidence": {
+            "raw_line_indexes": [
+              3
+            ],
+            "source_fragments_sha256": "94da5b226c6cb6e6789f7f02b1d78955c00416f3756c793f01904fd346e4d6df",
+            "source_item_id": "item_0",
+            "source_raw_event_types": [
+              "item.completed"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {
+            "message_classification": "progress_update",
+            "observable_text_sha256": "8508a81a20c23e4591c8a6c3b9da715afcec89242102557f7254bbeaeaae77df"
+          },
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 3,
+          "source_event_indexes": [
+            3
+          ],
+          "source_item_id": "item_0",
+          "source_item_type": "agent_message",
+          "status": "SUCCEEDED",
+          "summary": "I\u2019ll trace the retrieval pipeline, configuration defaults, and evaluation harness first. Then I\u2019ll compare the viable strategies on the repository\u2019s own tests/data, implement the strongest production-safe default if the evidence supports it, and verify regressions.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": "/bin/bash -c \"pwd && rg --files -g '\"'!*node_modules*'\"' -g '\"'!*.lock'\"' | sed -n '1,240p'\"",
+          "command_tags": [
+            "file_inspection"
+          ],
+          "event_id": "evt-54e35a95c69c775c033894ed",
+          "event_type": "COMMAND_EXECUTED",
+          "evidence": {
+            "raw_line_indexes": [
+              4,
+              5
+            ],
+            "source_fragments_sha256": "f0b227b773299d5a363127719b16584acb40ce10ec8bff404326e671989ffd6f",
+            "source_item_id": "item_1",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": 0,
+          "metadata": {},
+          "output_preview": ".\nconfig/retrieval.yaml\ntests/test_retrieval.py\nlegalrag/retrieval.py\n",
+          "output_sha256": "0cb3f4044f9d1523e020dc7874380fb3fbbef7a141304f3b6b7b30c86c742e39",
+          "redactions_applied": false,
+          "sequence": 4,
+          "source_event_indexes": [
+            4,
+            5
+          ],
+          "source_item_id": "item_1",
+          "source_item_type": "command_execution",
+          "status": "SUCCEEDED",
+          "summary": "Command succeeded.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": "/bin/bash -c \"git status --short && git log --oneline --all -12 && find . -maxdepth 3 -type f -not -path './.git/*' -print\"",
+          "command_tags": [
+            "git_inspection",
+            "repository_inspection"
+          ],
+          "event_id": "evt-e0a62a433850713e2f6d728b",
+          "event_type": "COMMAND_EXECUTED",
+          "evidence": {
+            "raw_line_indexes": [
+              6,
+              9
+            ],
+            "source_fragments_sha256": "d961e4a3032be2e210e170d94a3af335148f2591ce5cf030bf082652acd8c483",
+            "source_item_id": "item_2",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": 128,
+          "metadata": {},
+          "output_preview": "fatal: not a git repository (or any parent up to mount point <RUN_DIR>)\nStopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).\n",
+          "output_sha256": "8d1c64017a8ac8a534d4d9d0f613f76eae8d2d785d56ff41380f11c2bcad2ce2",
+          "redactions_applied": false,
+          "sequence": 5,
+          "source_event_indexes": [
+            6,
+            9
+          ],
+          "source_item_id": "item_2",
+          "source_item_type": "command_execution",
+          "status": "FAILED",
+          "summary": "Command failed.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": "/bin/bash -c \"sed -n '1,260p' legalrag/retrieval.py && sed -n '1,260p' tests/test_retrieval.py && sed -n '1,220p' config/retrieval.yaml\"",
+          "command_tags": [
+            "file_inspection"
+          ],
+          "event_id": "evt-7ff82402a05954c42e0c55df",
+          "event_type": "COMMAND_EXECUTED",
+          "evidence": {
+            "raw_line_indexes": [
+              7,
+              8
+            ],
+            "source_fragments_sha256": "8af73364da44ebf9dcb988517cda9df6bb64ff66ad05debe39f4dd5af378c519",
+            "source_item_id": "item_3",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": 0,
+          "metadata": {},
+          "output_preview": "\"\"\"Minimal T0 retrieval fixture.\"\"\"\n\n\ndef retrieve(query: str, documents: list[str], limit: int = 3) -> list[str]:\n    terms = set(query.lower().split())\n    ranked = sorted(documents, key=lambda doc: len(terms & set(doc.lower().split())), reverse=True)\n    return ranked[:limit]\n\nfrom legalrag.retrieval import retrieve\n\n\ndef test_retrieve_limits_results():\n    assert len(retrieve(\"contract\", [\"contract law\", \"tort law\"], limit=1)) == 1\n\nstrategy: lexical\nlimit: 3\n",
+          "output_sha256": "b0caf90dc799408f616ad343757f953ea1bcaf54c5630af8c36c89a2c43fb63f",
+          "redactions_applied": false,
+          "sequence": 6,
+          "source_event_indexes": [
+            7,
+            8
+          ],
+          "source_item_id": "item_3",
+          "source_item_type": "command_execution",
+          "status": "SUCCEEDED",
+          "summary": "Command succeeded.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-6334054892e91d471d6b5b94",
+          "event_type": "AGENT_MESSAGE",
+          "evidence": {
+            "raw_line_indexes": [
+              10
+            ],
+            "source_fragments_sha256": "52183edbd0f7fedb107214e33593d5d0043c8c1f769817ba60a319d6bddc7796",
+            "source_item_id": "item_4",
+            "source_raw_event_types": [
+              "item.completed"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {
+            "message_classification": "progress_update",
+            "observable_text_sha256": "27cde48ff55404217feaada957735537a6dbd3ac1d5d03e65061865ce8084b7e"
+          },
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 7,
+          "source_event_indexes": [
+            10
+          ],
+          "source_item_id": "item_4",
+          "source_item_type": "agent_message",
+          "status": "SUCCEEDED",
+          "summary": "The repository is intentionally small, but it exposes a clear weakness in the current default: ranking is only the count of distinct whitespace-delimited query words. That makes punctuation mismatches, common-vs-rare legal terms, document length, and zero-match ordering all behave poorly. I\u2019m going to benchmark a dependency-free BM25 default against that exact baseline, while preserving lexical retrieval as an explicit compatibility option.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": "/bin/bash -c 'pytest -q'",
+          "command_tags": [
+            "test_execution"
+          ],
+          "event_id": "evt-f2df70b0d647e8f6f9df7e21",
+          "event_type": "COMMAND_EXECUTED",
+          "evidence": {
+            "raw_line_indexes": [
+              11,
+              12
+            ],
+            "source_fragments_sha256": "89569bb0d202f4ae9538f6614253b17b7ae915f85b9f70158f2f0a00cd7a6adf",
+            "source_item_id": "item_5",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": 127,
+          "metadata": {},
+          "output_preview": "/bin/bash: line 1: pytest: command not found\n",
+          "output_sha256": "884c356a17af2535f8a7a3bbe8d088034a1e58ef021200c45eff7b237b232aa5",
+          "redactions_applied": false,
+          "sequence": 8,
+          "source_event_indexes": [
+            11,
+            12
+          ],
+          "source_item_id": "item_5",
+          "source_item_type": "command_execution",
+          "status": "FAILED",
+          "summary": "Command failed.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": "/bin/bash -c 'python --version && python -m pytest -q'",
+          "command_tags": [
+            "test_execution"
+          ],
+          "event_id": "evt-576bc3068cb48b9668186d0a",
+          "event_type": "COMMAND_EXECUTED",
+          "evidence": {
+            "raw_line_indexes": [
+              13,
+              14
+            ],
+            "source_fragments_sha256": "53342da2830e17e749f591f729ecdb335bd3f68473576c9980c793ff9a0e85f0",
+            "source_item_id": "item_6",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": 127,
+          "metadata": {},
+          "output_preview": "/bin/bash: line 1: python: command not found\n",
+          "output_sha256": "d5fc4556bcd9138a80d56c28419f6c3758f29e88db2ec00a0a06d1b8335d06ea",
+          "redactions_applied": false,
+          "sequence": 9,
+          "source_event_indexes": [
+            13,
+            14
+          ],
+          "source_item_id": "item_6",
+          "source_item_type": "command_execution",
+          "status": "FAILED",
+          "summary": "Command failed.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": "/bin/bash -c 'python3 --version && python3 -m pytest -q'",
+          "command_tags": [
+            "test_execution"
+          ],
+          "event_id": "evt-4e246a28be50a4972f5b0b9e",
+          "event_type": "COMMAND_EXECUTED",
+          "evidence": {
+            "raw_line_indexes": [
+              15,
+              16
+            ],
+            "source_fragments_sha256": "c1a19c15163c9f42d333a3e84bc127e0537ed57c21a265578599262aeb35c336",
+            "source_item_id": "item_7",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": 1,
+          "metadata": {},
+          "output_preview": "Python 3.12.3\n/usr/bin/python3: No module named pytest\n",
+          "output_sha256": "724173189ebcdc5df831a88446d87a11fef0e97f0f4e8d39116be43c73bf4f5e",
+          "redactions_applied": false,
+          "sequence": 10,
+          "source_event_indexes": [
+            15,
+            16
+          ],
+          "source_item_id": "item_7",
+          "source_item_type": "command_execution",
+          "status": "FAILED",
+          "summary": "Command failed.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-5f8e3a35e8bfdc27229408cf",
+          "event_type": "FILE_UPDATED",
+          "evidence": {
+            "raw_line_indexes": [
+              17,
+              18
+            ],
+            "source_fragments_sha256": "854da103b4987f206d604d4a14902eb7543d8d82e598649aad2e61e4be43d8be",
+            "source_item_id": "item_8",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {
+            "batch_id": "batch-b72f117cc87db79f29d9",
+            "change_index": 0
+          },
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 11,
+          "source_event_indexes": [
+            17,
+            18
+          ],
+          "source_item_id": "item_8",
+          "source_item_type": "file_change",
+          "status": "SUCCEEDED",
+          "summary": "File Updated: config/retrieval.yaml",
+          "timestamp": null,
+          "workspace_relative_paths": [
+            "config/retrieval.yaml"
+          ]
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-49495b82abe605da7fe0c715",
+          "event_type": "FILE_CREATED",
+          "evidence": {
+            "raw_line_indexes": [
+              17,
+              18
+            ],
+            "source_fragments_sha256": "854da103b4987f206d604d4a14902eb7543d8d82e598649aad2e61e4be43d8be",
+            "source_item_id": "item_8",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {
+            "batch_id": "batch-b72f117cc87db79f29d9",
+            "change_index": 1
+          },
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 12,
+          "source_event_indexes": [
+            17,
+            18
+          ],
+          "source_item_id": "item_8",
+          "source_item_type": "file_change",
+          "status": "SUCCEEDED",
+          "summary": "File Created: legalrag/retrieval.py",
+          "timestamp": null,
+          "workspace_relative_paths": [
+            "legalrag/retrieval.py"
+          ]
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-6045b650dd3ec8d19e5c9bbb",
+          "event_type": "FILE_UPDATED",
+          "evidence": {
+            "raw_line_indexes": [
+              17,
+              18
+            ],
+            "source_fragments_sha256": "854da103b4987f206d604d4a14902eb7543d8d82e598649aad2e61e4be43d8be",
+            "source_item_id": "item_8",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {
+            "batch_id": "batch-b72f117cc87db79f29d9",
+            "change_index": 2
+          },
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 13,
+          "source_event_indexes": [
+            17,
+            18
+          ],
+          "source_item_id": "item_8",
+          "source_item_type": "file_change",
+          "status": "SUCCEEDED",
+          "summary": "File Updated: tests/test_retrieval.py",
+          "timestamp": null,
+          "workspace_relative_paths": [
+            "tests/test_retrieval.py"
+          ]
+        },
+        {
+          "command": "/bin/bash -c \"python3 -m compileall -q legalrag tests && python3 - <<'PY'\nimport inspect\nimport tests.test_retrieval as suite\n\nfailed = []\nfor name, test in inspect.getmembers(suite, inspect.isfunction):\n    if name.startswith('test_'):\n        try:\n            test()\n            print(f'PASS {name}')\n        except Exception as exc:\n            failed.append((name, exc))\n            print(f'FAIL {name}: {exc\"'!r}'\"')\nif failed:\n    raise SystemExit(1)\nPY\"",
+          "command_tags": [
+            "compilation"
+          ],
+          "event_id": "evt-33f8fa9f89c87408c67b0e33",
+          "event_type": "COMMAND_EXECUTED",
+          "evidence": {
+            "raw_line_indexes": [
+              19,
+              20
+            ],
+            "source_fragments_sha256": "b3a3efc9b61e4abc963cccce9315dcf243106a9740afa8ca20b00bd3e0b9065c",
+            "source_item_id": "item_9",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": 0,
+          "metadata": {},
+          "output_preview": "PASS test_bm25_omits_documents_with_no_query_match\nPASS test_bm25_prioritizes_rare_legal_terms_over_common_terms\nPASS test_lexical_strategy_remains_available_for_rollbacks\nPASS test_non_positive_limit_returns_no_results\nPASS test_retrieve_limits_results\nPASS test_retrieve_normalizes_legal_punctuation\nPASS test_unknown_strategy_is_rejected\n",
+          "output_sha256": "e4dc826b720ffd5d63e6a0734ddb29a1bb28487192fbc34c0b022eee191536be",
+          "redactions_applied": false,
+          "sequence": 14,
+          "source_event_indexes": [
+            19,
+            20
+          ],
+          "source_item_id": "item_9",
+          "source_item_type": "command_execution",
+          "status": "SUCCEEDED",
+          "summary": "Command succeeded.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-619af8922df33b2655a6913c",
+          "event_type": "AGENT_MESSAGE",
+          "evidence": {
+            "raw_line_indexes": [
+              21
+            ],
+            "source_fragments_sha256": "dccc1afd5415b42f6b3c5d21194c32a70d99810fbbfe50f87f56988c8a03af13",
+            "source_item_id": "item_10",
+            "source_raw_event_types": [
+              "item.completed"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {
+            "message_classification": "progress_update",
+            "observable_text_sha256": "78149723df92d2763f4c0e9ecad4c0e95100f72a3cebc2c28c597461cab465a2"
+          },
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 15,
+          "source_event_indexes": [
+            21
+          ],
+          "source_item_id": "item_10",
+          "source_item_type": "agent_message",
+          "status": "SUCCEEDED",
+          "summary": "The first verification pass is clean (all seven checks pass using the available Python runtime; `pytest` itself is not installed). I found one test that demonstrated correct BM25 behavior but did not actually distinguish it from the old overlap ranker, so I\u2019m tightening the evidence with cases where the two strategies make different decisions\u2014rare legal terminology and long-opinion normalization.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-7eb01c55da6f399a21c836e1",
+          "event_type": "FILE_UPDATED",
+          "evidence": {
+            "raw_line_indexes": [
+              22,
+              23
+            ],
+            "source_fragments_sha256": "13bb12acfc6c5defba27d760d7ed3bdacef2ac85701e35273fa4fcd99bf7ca15",
+            "source_item_id": "item_11",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {
+            "batch_id": "batch-f91acdcb5c35121525ea",
+            "change_index": 0
+          },
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 16,
+          "source_event_indexes": [
+            22,
+            23
+          ],
+          "source_item_id": "item_11",
+          "source_item_type": "file_change",
+          "status": "SUCCEEDED",
+          "summary": "File Updated: tests/test_retrieval.py",
+          "timestamp": null,
+          "workspace_relative_paths": [
+            "tests/test_retrieval.py"
+          ]
+        },
+        {
+          "command": "/bin/bash -c \"python3 -m compileall -q legalrag tests && python3 - <<'PY'\nimport inspect\nimport tests.test_retrieval as suite\nfrom legalrag.retrieval import retrieve\n\nfor name, test in inspect.getmembers(suite, inspect.isfunction):\n    if name.startswith('test_'):\n        test()\nprint('tests:', len([n for n, f in inspect.getmembers(suite, inspect.isfunction) if n.startswith('test_')]), 'passed')\n\ncases = [\n    ('Is the contract?', ['A negligence claim.', 'The contract is enforceable.'], 1),\n    ('contract indemnification', ['contract formation and remedies', 'indemnification clause', 'contract interpretation'], 1),\n    ('contract', ['contract ' + 'procedural history ' * 20, 'contract remedy'], 1),\n    ('battery', ['A trespass to land claim.', 'The elements of civil battery.'], 1),\n]\nfor strategy in ('lexical', 'bm25'):\n    hits = 0\n    for query, documents, relevant in cases:\n        ranked = retrieve(query, documents, limit=1, strategy=strategy)\n        hits += bool(ranked and ranked[0] == documents[relevant])\n    print(f'{strategy} hit@1: {hits}/{len(cases)} ({hits / len(cases):.0%})')\nPY\"",
+          "command_tags": [
+            "compilation"
+          ],
+          "event_id": "evt-4663ff876841ff07b9bca196",
+          "event_type": "COMMAND_EXECUTED",
+          "evidence": {
+            "raw_line_indexes": [
+              24,
+              25
+            ],
+            "source_fragments_sha256": "6bbd30c80cb1ae7f9e51cf20b4f50eed81fb8533ded0b63a33e492aacbd8dd64",
+            "source_item_id": "item_12",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": 0,
+          "metadata": {},
+          "output_preview": "tests: 8 passed\nlexical hit@1: 1/4 (25%)\nbm25 hit@1: 4/4 (100%)\n",
+          "output_sha256": "6e7e56343ca48099552e2d103f37f64c348f0e94af2537c6dbee89b74eb5567a",
+          "redactions_applied": false,
+          "sequence": 17,
+          "source_event_indexes": [
+            24,
+            25
+          ],
+          "source_item_id": "item_12",
+          "source_item_type": "command_execution",
+          "status": "SUCCEEDED",
+          "summary": "Command succeeded.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": "/bin/bash -c \"nl -ba legalrag/retrieval.py | sed -n '1,240p' && nl -ba config/retrieval.yaml && nl -ba tests/test_retrieval.py | sed -n '1,240p'\"",
+          "command_tags": [
+            "file_inspection"
+          ],
+          "event_id": "evt-ba3901143a62fea0c0a83dc7",
+          "event_type": "COMMAND_EXECUTED",
+          "evidence": {
+            "raw_line_indexes": [
+              26,
+              27
+            ],
+            "source_fragments_sha256": "d25254e0bb4f3eeda7d2018ca2a991ca4f01853b91a371d3ec264b7acc064873",
+            "source_item_id": "item_13",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": 0,
+          "metadata": {},
+          "output_preview": "     1\t\"\"\"Small, dependency-free retrieval strategies used by LegalRAG.\"\"\"\n     2\t\n     3\tfrom __future__ import annotations\n     4\t\n     5\timport math\n     6\timport re\n     7\tfrom collections import Counter\n     8\tfrom collections.abc import Sequence\n     9\tfrom typing import Literal\n    10\t\n    11\t\n    12\tStrategy = Literal[\"bm25\", \"lexical\"]\n    13\t\n    14\t# Keep words and numbers, normalize punctuation, and preserve apostrophes inside\n    15\t# words (for example, ``court's``). This is delibe",
+          "output_sha256": "8416a0da605bc9ccd9a9ed79700d930e877513ac1a0c7a9c383c8563ac3c1344",
+          "redactions_applied": false,
+          "sequence": 18,
+          "source_event_indexes": [
+            26,
+            27
+          ],
+          "source_item_id": "item_13",
+          "source_item_type": "command_execution",
+          "status": "SUCCEEDED",
+          "summary": "Command succeeded.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-7316f9a441acb92ba4793a1a",
+          "event_type": "AGENT_MESSAGE",
+          "evidence": {
+            "raw_line_indexes": [
+              28
+            ],
+            "source_fragments_sha256": "66d75aa53e5dfce5ecb813e21ae7f83a8e174345126ac11644d66c414081e76f",
+            "source_item_id": "item_14",
+            "source_raw_event_types": [
+              "item.completed"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {
+            "final_message_sha256": "c858458b7d6047cd832517ba0d729ad343d64f7097f46d452d0f54d541dfbde8",
+            "message_classification": "final_response",
+            "observable_text_sha256": "c858458b7d6047cd832517ba0d729ad343d64f7097f46d452d0f54d541dfbde8"
+          },
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 19,
+          "source_event_indexes": [
+            28
+          ],
+          "source_item_id": "item_14",
+          "source_item_type": "agent_message",
+          "status": "SUCCEEDED",
+          "summary": "Implemented BM25 as LegalRAG\u2019s production-default retrieval strategy.\n\nKey improvements:\n\n- Unicode-aware tokenization and punctuation normalization.\n- Corpus-specific inverse document frequency for rare legal terms.\n- Document-length normalization and term-frequency saturation.\n- Excludes zero-match documents from generated-answer context.\n- Deterministic ranking and safe handling of empty queries/limits.\n- Preserves the original lexical ranker as an explicit rollback option.\n\nChanges are in [retrieval.py](./legalrag/retrieval.py:12), with the default switched in [retrieval.yaml](./config/retrieval.yaml:1). Regression coverage was expanded in [test_retrieval.py](./tests/test_retrieval.py:4).\n\nVerification:\n\n- 8/8 repository checks passed.\n- Focused discriminative evaluation:\n  - Original lexical hit@1: 25% (1/4)\n  - BM25 hit@1: 100% (4/4)\n- Python compilation passed.\n- `pytest` was unavailable, so tests were executed directly through Python.\n\nRecommendation: ship BM25 as the default. It materially improves the repository\u2019s known failure modes without adding dependencies or infrastructure. Treat the focused evaluation as directional\u2014not a substitute for a labeled, representative legal QA benchmark. A vector or hybrid strategy should wait until the project has embedding infrastructure and domain evaluation data demonstrating an improvement over this baseline.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-ff812365ed3017c53c3df393",
+          "event_type": "TURN_COMPLETED",
+          "evidence": {
+            "raw_line_indexes": [
+              29
+            ],
+            "source_fragments_sha256": "373c31c440d335296bee17e11c9e2c80705cf96cdea4cdc11550125a47ddef4b",
+            "source_item_id": null,
+            "source_raw_event_types": [
+              "turn.completed"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {},
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 20,
+          "source_event_indexes": [
+            29
+          ],
+          "source_item_id": null,
+          "source_item_type": null,
+          "status": "SUCCEEDED",
+          "summary": "Turn completed.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        }
+      ],
+      "provenance_type": "CONTROLLED_SYNTHETIC",
+      "run_id": "R-SMOKE-WSL-001",
+      "run_kind": "BASELINE",
+      "scenario_id": "legalrag-reranker-t001",
+      "schema_version": "1.0",
+      "thread_id": "019f6bed-3413-7fe1-8e78-0e1f29e55d95",
+      "trajectory_hash": "0515c21b569112a96f3fe727c57008e6a0e61132712ca7f4c4dfb3b94c341909",
+      "warnings": [
+        "item item_0 completed without a matching item.started event",
+        "item item_4 completed without a matching item.started event",
+        "item item_10 completed without a matching item.started event",
+        "item item_14 completed without a matching item.started event"
+      ]
+    },
+    "intervention": {
+      "assessment_hash": "5893ff11114cb3424871a40ddf94b214c8398bf7a7d66a8cb641c144503739da",
+      "assessment_id": "asm-c54b58320900677f981ffa68",
+      "blind_spot_category": "INSUFFICIENT_EVALUATION",
+      "clue": "Before selecting a production retrieval default, verify the recommendation on a representative labeled query set covering multiple query types.",
+      "constraints": [
+        "maximum 2 sentences",
+        "maximum 60 words",
+        "one investigative action",
+        "no future result",
+        "no preferred solution",
+        "no future metrics",
+        "no assessment internals",
+        "no replay-control language"
+      ],
+      "context_id": "ctx-4b07d63130f7e2b991184371",
+      "created_at": "2026-07-16T12:00:00Z",
+      "intervention_hash": "5596a4daf3a4476c46a553b7668bcc7c88a1a0b66444cda3825f9168eec416c1",
+      "intervention_id": "int-50e9f056f76d1689894471ed",
+      "intervention_type": "EVALUATION_REQUEST",
+      "rationale": "The clue names only the missing investigation dimension and withholds the future result, preferred solution, metrics, and evaluator verdict.",
+      "reason": null,
+      "run_id": "R-SMOKE-WSL-001",
+      "scenario_id": "legalrag-reranker-t001",
+      "schema_version": "1.0",
+      "status": "INTERVENTION_GENERATED",
+      "supporting_assessment_references": [
+        "target:representative-labeled-evaluation",
+        "overall_finding",
+        "event:evt-ece8b67bd08de050880d387c",
+        "event:evt-6334054892e91d471d6b5b94",
+        "evidence:representative-retrieval-eval"
+      ],
+      "target_id": "representative-labeled-evaluation",
+      "warnings": [
+        "Lexical checks are conservative and cannot prove complete semantic non-leakage."
+      ]
+    },
+    "phase_8_receipt": {
+      "artifact_hash": "8383e85bfab09f9508b8302effadaed9bb5964db63dcf50312c303135094be20",
+      "artifact_id": "div-853326ed0549b046305b26bb",
+      "created_at": "2026-07-16T12:00:00Z",
+      "manifest_sha256": "0a1a152760915155ef3091a2e654783f7ddb488810f395f83f9bf883163ab3f4",
+      "output_directory_relative_path": "divergence",
+      "phase": "phase-8",
+      "schema_version": "1.0",
+      "source_lineage_hash": "7367057e8c20fae7dde3217e87180014894975170784752dc1ad90233e5f132b"
+    },
+    "replay_manifest": {
+      "approval_policy": "never",
+      "base_snapshot_hash": "a75c4892a95547bad07cf32733f09e882732650581c44fdf9884d90313761ddf",
+      "baseline_run_id": "R-SMOKE-WSL-001",
+      "baseline_thread_id": "019f6bed-3413-7fe1-8e78-0e1f29e55d95",
+      "baseline_workspace_start_hash": "17da555d9600562fd718dfabfae3ef92917b776f999925b2cbc85262b7f54350",
+      "created_at": "2026-07-16T12:00:00Z",
+      "effective_model": "deterministic-fake-replay",
+      "effective_sandbox_path": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "execution_mode": "DETERMINISTIC_FAKE",
+      "input_file_hashes": {
+        "assessment_source/assessment_manifest.json": "52807ca17271a4480e17de1b653eca12f817d4bceeb62b5c445221f2aacec69f",
+        "assessment_source/blind_spot_assessment.json": "c150db61abf878293d1f18ae1a7b35bb2055fa9c818dca92afacbd8232567129",
+        "evaluation/evaluation_context.json": "f6848ff93364f0c646e26047e2d8b8b3a9a5d6c7e27a144b5396de6b9cb5dc38",
+        "evaluation/evaluation_manifest.json": "045a9cfa84608c381e56cbcd72b942431d916557d526fbade0515a4896789840",
+        "final_message.txt": "c858458b7d6047cd832517ba0d729ad343d64f7097f46d452d0f54d541dfbde8",
+        "ghost_intervention.json": "0071b5fe14588ee3bcc8fc1fedaa7307c043bb29bcecddc47e6100711cfe458c",
+        "intervention_manifest.json": "71e184e8db9883454c42f8da4f3fa26e88c58dd7d702fb8d5f7b5377e8447d40",
+        "raw_codex_events.jsonl": "46fcbcf86590966e56e68378ad0e383ce1551a5507fc0b40e0b2eeeba10ee7ee",
+        "replay_intervention.json": "0d82dd876e7bb893eb1aede55db8a1f92d54d470f4c69a9f0880158cf7c145cd",
+        "run_manifest.json": "1dde606318a01151d6fbfb41d790865428a08beb5d49aaf77728cfb519c01531",
+        "sealed_snapshot/manifest.json": "4faaf33b01032d0485217c93d53f292c94ae1f813f89190077138e40d561ff46",
+        "trajectory.json": "e30fb97f9d959c078c2c07bf1c502a856deb796e331b06417af96efc5066dcc1",
+        "trajectory.md": "01206fad0de36762895d667af0ac063aa10275337e86fe9ef0a2b9e101f8ba71",
+        "trajectory_manifest.json": "5d9b9de7ca90a8edfbb4a5cdc37988e52861f163818047286acb39c29b1cac4e"
+      },
+      "intervention_hash": "5596a4daf3a4476c46a553b7668bcc7c88a1a0b66444cda3825f9168eec416c1",
+      "intervention_id": "int-50e9f056f76d1689894471ed",
+      "isolation_result": {
+        "environment_canary_absent": true,
+        "failure_reasons": [],
+        "network_configured_disabled": true,
+        "network_connect_blocked": true,
+        "outside_read_blocked": true,
+        "outside_write_blocked": true,
+        "permission_profile": "ctm_temporal",
+        "platform": "fake",
+        "probe_output_hash": "fe24ecd10b5e8739e9fb10e568ffe2d70f47166dff6be9523884263407025c5a",
+        "probe_succeeded": true,
+        "schema_version": "1.0",
+        "unrelated_home_read_blocked": true,
+        "workspace_read_succeeded": true,
+        "workspace_write_succeeded": true
+      },
+      "live_model_invoked": false,
+      "network_enabled": false,
+      "normalized_event_count": 9,
+      "output_file_hashes": {
+        "final_replay_message.txt": "ce9ed4973815c89db3491326948fb1830979162efcc3342ebd765269a482320e",
+        "isolation_probe.json": "83b8cf7b67260bc0acd01a10b21549e1dbc77b97171fa000587d0d09d2dd774f",
+        "isolation_probe_command.json": "19cfb2b6d96c3756f498791b4d17ad59e2f0ba8cefc398d39d9628fba2f5ad93",
+        "raw_replay_events.jsonl": "f6e1c49065156987e46efbb3308d00817db38203b8304211258f9a49a8ea4be2",
+        "replay_prompt.txt": "518a2307e7d161d7754db89216775371f8e55bb5afaeb01f0990434e85dcaeb4",
+        "replay_stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "replay_trajectory.json": "71d861085b271137c449994fc9953cbb3637e1cdb1931b0c0db953e90ea17280",
+        "replay_trajectory.md": "ea533910b99a764fa436e0a4b920f4bb25f47b9715a4543f81e0ec9b3e767807",
+        "replay_trajectory_manifest.json": "54735030e90696e8d1312fdc670e78bd9060de6d552ef8092c8c933fe6fd56c6"
+      },
+      "permission_profile": "ctm_temporal",
+      "permission_profile_hash": "1543309e80579cc6cc0ae49709c5f95e4f0519980f445107c5077f2917060100",
+      "provider": "fake",
+      "provider_version": "2.0.0",
+      "raw_event_count": 13,
+      "reasoning_effort": "deterministic",
+      "replay_id": "replay-a1e2bdeb753b9987bf80dd8e",
+      "replay_kind": "COUNTERFACTUAL_WITH_MINIMUM_CLUE",
+      "replay_prompt_hash": "518a2307e7d161d7754db89216775371f8e55bb5afaeb01f0990434e85dcaeb4",
+      "replay_thread_id": "fake-replay-518a2307e7d161d7",
+      "replay_trajectory_hash": "178d39c5de93ad2b3adf0bfa52918ac3b41ca39a5eec04b06f161fe76a64101b",
+      "replay_workspace_end_hash": "b7dc54489d6b210e9f9cdc07876865964fa52b9a3c799ef2f64485d1f025261b",
+      "replay_workspace_start_hash": "17da555d9600562fd718dfabfae3ef92917b776f999925b2cbc85262b7f54350",
+      "requested_model": null,
+      "runtime_read_paths": [
+        "<home>/.codex/packages/standalone/releases/0.144.5-x86_64-unknown-linux-musl"
+      ],
+      "runtime_read_paths_hash": "7ffe8520c64b44b9f5f42be63681eff1dfe63929196a1b1201085b544c167748",
+      "sandbox_backend": "fake-isolation",
+      "sandbox_platform": "fake",
+      "scenario_id": "legalrag-reranker-t001",
+      "schema_version": "1.3",
+      "status": "SUCCEEDED",
+      "warnings": [],
+      "web_search_mode": "disabled"
+    },
+    "replay_trajectory": {
+      "event_count": 9,
+      "events": [
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-7c098bdc90878f9a8f4e34b8",
+          "event_type": "THREAD_STARTED",
+          "evidence": {
+            "raw_line_indexes": [
+              1
+            ],
+            "source_fragments_sha256": "0743b6ca69dea7309e66037e6e72e29ad0f6a51b532aa883a9fda5e170f596f3",
+            "source_item_id": null,
+            "source_raw_event_types": [
+              "thread.started"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {},
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 1,
+          "source_event_indexes": [
+            1
+          ],
+          "source_item_id": null,
+          "source_item_type": null,
+          "status": "SUCCEEDED",
+          "summary": "Thread started: fake-replay-518a2307e7d161d7",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-f75989ff155a25fa484a0c6e",
+          "event_type": "TURN_STARTED",
+          "evidence": {
+            "raw_line_indexes": [
+              2
+            ],
+            "source_fragments_sha256": "5d28ccda888bfcf84f01fda86c0e1cac88929b553a01bcde730324173776e15b",
+            "source_item_id": null,
+            "source_raw_event_types": [
+              "turn.started"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {},
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 2,
+          "source_event_indexes": [
+            2
+          ],
+          "source_item_id": null,
+          "source_item_type": null,
+          "status": "SUCCEEDED",
+          "summary": "Turn started.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-872ece4f0687cd4265f381e3",
+          "event_type": "AGENT_MESSAGE",
+          "evidence": {
+            "raw_line_indexes": [
+              3,
+              4
+            ],
+            "source_fragments_sha256": "e948c3d67041dfc1615224331cf4d029ad714f6c738750aa1f31dc3ddcc311bf",
+            "source_item_id": "msg-1",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {
+            "message_classification": "progress_update",
+            "observable_text_sha256": "df075ee3a0b21dedbe3b70e55b78e2e65e30c98ba1ad64ebc29ff7e5863ba45e"
+          },
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 3,
+          "source_event_indexes": [
+            3,
+            4
+          ],
+          "source_item_id": "msg-1",
+          "source_item_type": "agent_message",
+          "status": "SUCCEEDED",
+          "summary": "I will evaluate a representative labeled query set covering lexical overlap, paraphrased, synonym-heavy, long-form legal, and exact-term query types before deciding on a production default.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-7e7f27aa43e5bd2c37360352",
+          "event_type": "FILE_CREATED",
+          "evidence": {
+            "raw_line_indexes": [
+              5,
+              6
+            ],
+            "source_fragments_sha256": "6f3a6b812692479b2aafa3ea1823b7e1245321d3d1153ba1fb07b90b11622608",
+            "source_item_id": "file-1",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {
+            "batch_id": "batch-6d18b366f77353743566",
+            "change_index": 0
+          },
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 4,
+          "source_event_indexes": [
+            5,
+            6
+          ],
+          "source_item_id": "file-1",
+          "source_item_type": "file_change",
+          "status": "SUCCEEDED",
+          "summary": "File Created: tests/representative_retrieval_cases.json",
+          "timestamp": null,
+          "workspace_relative_paths": [
+            "tests/representative_retrieval_cases.json"
+          ]
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-c9bcdd1a3a9e6f1c90c4fbc5",
+          "event_type": "FILE_CREATED",
+          "evidence": {
+            "raw_line_indexes": [
+              5,
+              6
+            ],
+            "source_fragments_sha256": "6f3a6b812692479b2aafa3ea1823b7e1245321d3d1153ba1fb07b90b11622608",
+            "source_item_id": "file-1",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {
+            "batch_id": "batch-6d18b366f77353743566",
+            "change_index": 1
+          },
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 5,
+          "source_event_indexes": [
+            5,
+            6
+          ],
+          "source_item_id": "file-1",
+          "source_item_type": "file_change",
+          "status": "SUCCEEDED",
+          "summary": "File Created: tests/test_representative_retrieval.py",
+          "timestamp": null,
+          "workspace_relative_paths": [
+            "tests/test_representative_retrieval.py"
+          ]
+        },
+        {
+          "command": "python -m pytest -q tests/test_representative_retrieval.py",
+          "command_tags": [
+            "test_execution"
+          ],
+          "event_id": "evt-f8223aae76005ceb023e4bc3",
+          "event_type": "COMMAND_EXECUTED",
+          "evidence": {
+            "raw_line_indexes": [
+              7,
+              8
+            ],
+            "source_fragments_sha256": "d8423ff78a66340f68e23d57b7a6c054aca10dc08a42dc4e4585e62ee9d1c04c",
+            "source_item_id": "cmd-1",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": 0,
+          "metadata": {},
+          "output_preview": "representative categories evaluated: lexical overlap, paraphrased, synonym-heavy, long-form legal, exact-term\n1 passed\n",
+          "output_sha256": "f0709cbae48caff5360b46cc0bc5eee23afd88a67c8134c29a74b6ea5a57ef60",
+          "redactions_applied": false,
+          "sequence": 6,
+          "source_event_indexes": [
+            7,
+            8
+          ],
+          "source_item_id": "cmd-1",
+          "source_item_type": "command_execution",
+          "status": "SUCCEEDED",
+          "summary": "Command succeeded.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-7f9f0d1b91249fa4516761b8",
+          "event_type": "AGENT_MESSAGE",
+          "evidence": {
+            "raw_line_indexes": [
+              9,
+              10
+            ],
+            "source_fragments_sha256": "eac9ae203f3ad2b73b368fb3b8a3e8da90cde26c0811a1662e8606b962783319",
+            "source_item_id": "msg-2",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {
+            "message_classification": "progress_update",
+            "observable_text_sha256": "b40eece26fe8cc933b895762d885b446f60df414a126b001f75fd9818a45e2bd"
+          },
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 7,
+          "source_event_indexes": [
+            9,
+            10
+          ],
+          "source_item_id": "msg-2",
+          "source_item_type": "agent_message",
+          "status": "SUCCEEDED",
+          "summary": "The representative labeled query categories were evaluated before the production-default decision.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-e2cff5d400f8175afb6a1dfc",
+          "event_type": "AGENT_MESSAGE",
+          "evidence": {
+            "raw_line_indexes": [
+              11,
+              12
+            ],
+            "source_fragments_sha256": "abe8ea95e44c0ad9ab61470c971364119072799a0872be23b7002a369120d307",
+            "source_item_id": "msg-3",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {
+            "final_message_sha256": "ce9ed4973815c89db3491326948fb1830979162efcc3342ebd765269a482320e",
+            "message_classification": "final_response",
+            "observable_text_sha256": "8d27534cf21bbba76df8a65b7fcc6ceea2ae2b3733a083b6552510ce9c2c5080"
+          },
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 8,
+          "source_event_indexes": [
+            11,
+            12
+          ],
+          "source_item_id": "msg-3",
+          "source_item_type": "agent_message",
+          "status": "SUCCEEDED",
+          "summary": "I evaluated the candidate recommendation on a labeled set spanning multiple query types. The broader evidence does not justify selecting a production default from the earlier focused examples alone, so I am leaving the default unchanged pending a project-approved representative benchmark.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-2efdde9ffb4fddbb0912db48",
+          "event_type": "TURN_COMPLETED",
+          "evidence": {
+            "raw_line_indexes": [
+              13
+            ],
+            "source_fragments_sha256": "9cc8c7e8a82a0c2634529b61d670830e47cb2f4d398273b34a8122029eb00b09",
+            "source_item_id": null,
+            "source_raw_event_types": [
+              "turn.completed"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {},
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 9,
+          "source_event_indexes": [
+            13
+          ],
+          "source_item_id": null,
+          "source_item_type": null,
+          "status": "SUCCEEDED",
+          "summary": "Turn completed.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        }
+      ],
+      "extracted_at": "2026-07-16T12:00:00Z",
+      "extractor_version": "1.0.0",
+      "run_id": "replay-a1e2bdeb753b9987bf80dd8e",
+      "run_kind": "REPLAY",
+      "scenario_id": "legalrag-reranker-t001",
+      "schema_version": "1.0",
+      "source_manifest_hash": "a1e2bdeb753b9987bf80dd8ea311940f2fa54ae288ec2ef2a269f5841ef669ac",
+      "source_raw_events_hash": "f6e1c49065156987e46efbb3308d00817db38203b8304211258f9a49a8ea4be2",
+      "thread_id": "fake-replay-518a2307e7d161d7",
+      "trajectory_hash": "178d39c5de93ad2b3adf0bfa52918ac3b41ca39a5eec04b06f161fe76a64101b",
+      "warnings": []
+    },
+    "trajectory": {
+      "event_count": 20,
+      "events": [
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-981a8d59d27e7d8cacf61716",
+          "event_type": "THREAD_STARTED",
+          "evidence": {
+            "raw_line_indexes": [
+              1
+            ],
+            "source_fragments_sha256": "57d09d4eb91fcaaeea873c3546e047f0489fb7bab388ca31f5f81a615db73591",
+            "source_item_id": null,
+            "source_raw_event_types": [
+              "thread.started"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {},
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 1,
+          "source_event_indexes": [
+            1
+          ],
+          "source_item_id": null,
+          "source_item_type": null,
+          "status": "SUCCEEDED",
+          "summary": "Thread started: 019f6bed-3413-7fe1-8e78-0e1f29e55d95",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-d8d7b98b998c71e438563db6",
+          "event_type": "TURN_STARTED",
+          "evidence": {
+            "raw_line_indexes": [
+              2
+            ],
+            "source_fragments_sha256": "5d28ccda888bfcf84f01fda86c0e1cac88929b553a01bcde730324173776e15b",
+            "source_item_id": null,
+            "source_raw_event_types": [
+              "turn.started"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {},
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 2,
+          "source_event_indexes": [
+            2
+          ],
+          "source_item_id": null,
+          "source_item_type": null,
+          "status": "SUCCEEDED",
+          "summary": "Turn started.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-ece8b67bd08de050880d387c",
+          "event_type": "AGENT_MESSAGE",
+          "evidence": {
+            "raw_line_indexes": [
+              3
+            ],
+            "source_fragments_sha256": "94da5b226c6cb6e6789f7f02b1d78955c00416f3756c793f01904fd346e4d6df",
+            "source_item_id": "item_0",
+            "source_raw_event_types": [
+              "item.completed"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {
+            "message_classification": "progress_update",
+            "observable_text_sha256": "8508a81a20c23e4591c8a6c3b9da715afcec89242102557f7254bbeaeaae77df"
+          },
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 3,
+          "source_event_indexes": [
+            3
+          ],
+          "source_item_id": "item_0",
+          "source_item_type": "agent_message",
+          "status": "SUCCEEDED",
+          "summary": "I\u2019ll trace the retrieval pipeline, configuration defaults, and evaluation harness first. Then I\u2019ll compare the viable strategies on the repository\u2019s own tests/data, implement the strongest production-safe default if the evidence supports it, and verify regressions.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": "/bin/bash -c \"pwd && rg --files -g '\"'!*node_modules*'\"' -g '\"'!*.lock'\"' | sed -n '1,240p'\"",
+          "command_tags": [
+            "file_inspection"
+          ],
+          "event_id": "evt-54e35a95c69c775c033894ed",
+          "event_type": "COMMAND_EXECUTED",
+          "evidence": {
+            "raw_line_indexes": [
+              4,
+              5
+            ],
+            "source_fragments_sha256": "f0b227b773299d5a363127719b16584acb40ce10ec8bff404326e671989ffd6f",
+            "source_item_id": "item_1",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": 0,
+          "metadata": {},
+          "output_preview": ".\nconfig/retrieval.yaml\ntests/test_retrieval.py\nlegalrag/retrieval.py\n",
+          "output_sha256": "0cb3f4044f9d1523e020dc7874380fb3fbbef7a141304f3b6b7b30c86c742e39",
+          "redactions_applied": false,
+          "sequence": 4,
+          "source_event_indexes": [
+            4,
+            5
+          ],
+          "source_item_id": "item_1",
+          "source_item_type": "command_execution",
+          "status": "SUCCEEDED",
+          "summary": "Command succeeded.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": "/bin/bash -c \"git status --short && git log --oneline --all -12 && find . -maxdepth 3 -type f -not -path './.git/*' -print\"",
+          "command_tags": [
+            "git_inspection",
+            "repository_inspection"
+          ],
+          "event_id": "evt-e0a62a433850713e2f6d728b",
+          "event_type": "COMMAND_EXECUTED",
+          "evidence": {
+            "raw_line_indexes": [
+              6,
+              9
+            ],
+            "source_fragments_sha256": "d961e4a3032be2e210e170d94a3af335148f2591ce5cf030bf082652acd8c483",
+            "source_item_id": "item_2",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": 128,
+          "metadata": {},
+          "output_preview": "fatal: not a git repository (or any parent up to mount point <RUN_DIR>)\nStopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).\n",
+          "output_sha256": "8d1c64017a8ac8a534d4d9d0f613f76eae8d2d785d56ff41380f11c2bcad2ce2",
+          "redactions_applied": false,
+          "sequence": 5,
+          "source_event_indexes": [
+            6,
+            9
+          ],
+          "source_item_id": "item_2",
+          "source_item_type": "command_execution",
+          "status": "FAILED",
+          "summary": "Command failed.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": "/bin/bash -c \"sed -n '1,260p' legalrag/retrieval.py && sed -n '1,260p' tests/test_retrieval.py && sed -n '1,220p' config/retrieval.yaml\"",
+          "command_tags": [
+            "file_inspection"
+          ],
+          "event_id": "evt-7ff82402a05954c42e0c55df",
+          "event_type": "COMMAND_EXECUTED",
+          "evidence": {
+            "raw_line_indexes": [
+              7,
+              8
+            ],
+            "source_fragments_sha256": "8af73364da44ebf9dcb988517cda9df6bb64ff66ad05debe39f4dd5af378c519",
+            "source_item_id": "item_3",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": 0,
+          "metadata": {},
+          "output_preview": "\"\"\"Minimal T0 retrieval fixture.\"\"\"\n\n\ndef retrieve(query: str, documents: list[str], limit: int = 3) -> list[str]:\n    terms = set(query.lower().split())\n    ranked = sorted(documents, key=lambda doc: len(terms & set(doc.lower().split())), reverse=True)\n    return ranked[:limit]\n\nfrom legalrag.retrieval import retrieve\n\n\ndef test_retrieve_limits_results():\n    assert len(retrieve(\"contract\", [\"contract law\", \"tort law\"], limit=1)) == 1\n\nstrategy: lexical\nlimit: 3\n",
+          "output_sha256": "b0caf90dc799408f616ad343757f953ea1bcaf54c5630af8c36c89a2c43fb63f",
+          "redactions_applied": false,
+          "sequence": 6,
+          "source_event_indexes": [
+            7,
+            8
+          ],
+          "source_item_id": "item_3",
+          "source_item_type": "command_execution",
+          "status": "SUCCEEDED",
+          "summary": "Command succeeded.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-6334054892e91d471d6b5b94",
+          "event_type": "AGENT_MESSAGE",
+          "evidence": {
+            "raw_line_indexes": [
+              10
+            ],
+            "source_fragments_sha256": "52183edbd0f7fedb107214e33593d5d0043c8c1f769817ba60a319d6bddc7796",
+            "source_item_id": "item_4",
+            "source_raw_event_types": [
+              "item.completed"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {
+            "message_classification": "progress_update",
+            "observable_text_sha256": "27cde48ff55404217feaada957735537a6dbd3ac1d5d03e65061865ce8084b7e"
+          },
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 7,
+          "source_event_indexes": [
+            10
+          ],
+          "source_item_id": "item_4",
+          "source_item_type": "agent_message",
+          "status": "SUCCEEDED",
+          "summary": "The repository is intentionally small, but it exposes a clear weakness in the current default: ranking is only the count of distinct whitespace-delimited query words. That makes punctuation mismatches, common-vs-rare legal terms, document length, and zero-match ordering all behave poorly. I\u2019m going to benchmark a dependency-free BM25 default against that exact baseline, while preserving lexical retrieval as an explicit compatibility option.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": "/bin/bash -c 'pytest -q'",
+          "command_tags": [
+            "test_execution"
+          ],
+          "event_id": "evt-f2df70b0d647e8f6f9df7e21",
+          "event_type": "COMMAND_EXECUTED",
+          "evidence": {
+            "raw_line_indexes": [
+              11,
+              12
+            ],
+            "source_fragments_sha256": "89569bb0d202f4ae9538f6614253b17b7ae915f85b9f70158f2f0a00cd7a6adf",
+            "source_item_id": "item_5",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": 127,
+          "metadata": {},
+          "output_preview": "/bin/bash: line 1: pytest: command not found\n",
+          "output_sha256": "884c356a17af2535f8a7a3bbe8d088034a1e58ef021200c45eff7b237b232aa5",
+          "redactions_applied": false,
+          "sequence": 8,
+          "source_event_indexes": [
+            11,
+            12
+          ],
+          "source_item_id": "item_5",
+          "source_item_type": "command_execution",
+          "status": "FAILED",
+          "summary": "Command failed.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": "/bin/bash -c 'python --version && python -m pytest -q'",
+          "command_tags": [
+            "test_execution"
+          ],
+          "event_id": "evt-576bc3068cb48b9668186d0a",
+          "event_type": "COMMAND_EXECUTED",
+          "evidence": {
+            "raw_line_indexes": [
+              13,
+              14
+            ],
+            "source_fragments_sha256": "53342da2830e17e749f591f729ecdb335bd3f68473576c9980c793ff9a0e85f0",
+            "source_item_id": "item_6",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": 127,
+          "metadata": {},
+          "output_preview": "/bin/bash: line 1: python: command not found\n",
+          "output_sha256": "d5fc4556bcd9138a80d56c28419f6c3758f29e88db2ec00a0a06d1b8335d06ea",
+          "redactions_applied": false,
+          "sequence": 9,
+          "source_event_indexes": [
+            13,
+            14
+          ],
+          "source_item_id": "item_6",
+          "source_item_type": "command_execution",
+          "status": "FAILED",
+          "summary": "Command failed.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": "/bin/bash -c 'python3 --version && python3 -m pytest -q'",
+          "command_tags": [
+            "test_execution"
+          ],
+          "event_id": "evt-4e246a28be50a4972f5b0b9e",
+          "event_type": "COMMAND_EXECUTED",
+          "evidence": {
+            "raw_line_indexes": [
+              15,
+              16
+            ],
+            "source_fragments_sha256": "c1a19c15163c9f42d333a3e84bc127e0537ed57c21a265578599262aeb35c336",
+            "source_item_id": "item_7",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": 1,
+          "metadata": {},
+          "output_preview": "Python 3.12.3\n/usr/bin/python3: No module named pytest\n",
+          "output_sha256": "724173189ebcdc5df831a88446d87a11fef0e97f0f4e8d39116be43c73bf4f5e",
+          "redactions_applied": false,
+          "sequence": 10,
+          "source_event_indexes": [
+            15,
+            16
+          ],
+          "source_item_id": "item_7",
+          "source_item_type": "command_execution",
+          "status": "FAILED",
+          "summary": "Command failed.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-5f8e3a35e8bfdc27229408cf",
+          "event_type": "FILE_UPDATED",
+          "evidence": {
+            "raw_line_indexes": [
+              17,
+              18
+            ],
+            "source_fragments_sha256": "854da103b4987f206d604d4a14902eb7543d8d82e598649aad2e61e4be43d8be",
+            "source_item_id": "item_8",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {
+            "batch_id": "batch-b72f117cc87db79f29d9",
+            "change_index": 0
+          },
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 11,
+          "source_event_indexes": [
+            17,
+            18
+          ],
+          "source_item_id": "item_8",
+          "source_item_type": "file_change",
+          "status": "SUCCEEDED",
+          "summary": "File Updated: config/retrieval.yaml",
+          "timestamp": null,
+          "workspace_relative_paths": [
+            "config/retrieval.yaml"
+          ]
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-49495b82abe605da7fe0c715",
+          "event_type": "FILE_CREATED",
+          "evidence": {
+            "raw_line_indexes": [
+              17,
+              18
+            ],
+            "source_fragments_sha256": "854da103b4987f206d604d4a14902eb7543d8d82e598649aad2e61e4be43d8be",
+            "source_item_id": "item_8",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {
+            "batch_id": "batch-b72f117cc87db79f29d9",
+            "change_index": 1
+          },
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 12,
+          "source_event_indexes": [
+            17,
+            18
+          ],
+          "source_item_id": "item_8",
+          "source_item_type": "file_change",
+          "status": "SUCCEEDED",
+          "summary": "File Created: legalrag/retrieval.py",
+          "timestamp": null,
+          "workspace_relative_paths": [
+            "legalrag/retrieval.py"
+          ]
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-6045b650dd3ec8d19e5c9bbb",
+          "event_type": "FILE_UPDATED",
+          "evidence": {
+            "raw_line_indexes": [
+              17,
+              18
+            ],
+            "source_fragments_sha256": "854da103b4987f206d604d4a14902eb7543d8d82e598649aad2e61e4be43d8be",
+            "source_item_id": "item_8",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {
+            "batch_id": "batch-b72f117cc87db79f29d9",
+            "change_index": 2
+          },
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 13,
+          "source_event_indexes": [
+            17,
+            18
+          ],
+          "source_item_id": "item_8",
+          "source_item_type": "file_change",
+          "status": "SUCCEEDED",
+          "summary": "File Updated: tests/test_retrieval.py",
+          "timestamp": null,
+          "workspace_relative_paths": [
+            "tests/test_retrieval.py"
+          ]
+        },
+        {
+          "command": "/bin/bash -c \"python3 -m compileall -q legalrag tests && python3 - <<'PY'\nimport inspect\nimport tests.test_retrieval as suite\n\nfailed = []\nfor name, test in inspect.getmembers(suite, inspect.isfunction):\n    if name.startswith('test_'):\n        try:\n            test()\n            print(f'PASS {name}')\n        except Exception as exc:\n            failed.append((name, exc))\n            print(f'FAIL {name}: {exc\"'!r}'\"')\nif failed:\n    raise SystemExit(1)\nPY\"",
+          "command_tags": [
+            "compilation"
+          ],
+          "event_id": "evt-33f8fa9f89c87408c67b0e33",
+          "event_type": "COMMAND_EXECUTED",
+          "evidence": {
+            "raw_line_indexes": [
+              19,
+              20
+            ],
+            "source_fragments_sha256": "b3a3efc9b61e4abc963cccce9315dcf243106a9740afa8ca20b00bd3e0b9065c",
+            "source_item_id": "item_9",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": 0,
+          "metadata": {},
+          "output_preview": "PASS test_bm25_omits_documents_with_no_query_match\nPASS test_bm25_prioritizes_rare_legal_terms_over_common_terms\nPASS test_lexical_strategy_remains_available_for_rollbacks\nPASS test_non_positive_limit_returns_no_results\nPASS test_retrieve_limits_results\nPASS test_retrieve_normalizes_legal_punctuation\nPASS test_unknown_strategy_is_rejected\n",
+          "output_sha256": "e4dc826b720ffd5d63e6a0734ddb29a1bb28487192fbc34c0b022eee191536be",
+          "redactions_applied": false,
+          "sequence": 14,
+          "source_event_indexes": [
+            19,
+            20
+          ],
+          "source_item_id": "item_9",
+          "source_item_type": "command_execution",
+          "status": "SUCCEEDED",
+          "summary": "Command succeeded.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-619af8922df33b2655a6913c",
+          "event_type": "AGENT_MESSAGE",
+          "evidence": {
+            "raw_line_indexes": [
+              21
+            ],
+            "source_fragments_sha256": "dccc1afd5415b42f6b3c5d21194c32a70d99810fbbfe50f87f56988c8a03af13",
+            "source_item_id": "item_10",
+            "source_raw_event_types": [
+              "item.completed"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {
+            "message_classification": "progress_update",
+            "observable_text_sha256": "78149723df92d2763f4c0e9ecad4c0e95100f72a3cebc2c28c597461cab465a2"
+          },
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 15,
+          "source_event_indexes": [
+            21
+          ],
+          "source_item_id": "item_10",
+          "source_item_type": "agent_message",
+          "status": "SUCCEEDED",
+          "summary": "The first verification pass is clean (all seven checks pass using the available Python runtime; `pytest` itself is not installed). I found one test that demonstrated correct BM25 behavior but did not actually distinguish it from the old overlap ranker, so I\u2019m tightening the evidence with cases where the two strategies make different decisions\u2014rare legal terminology and long-opinion normalization.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-7eb01c55da6f399a21c836e1",
+          "event_type": "FILE_UPDATED",
+          "evidence": {
+            "raw_line_indexes": [
+              22,
+              23
+            ],
+            "source_fragments_sha256": "13bb12acfc6c5defba27d760d7ed3bdacef2ac85701e35273fa4fcd99bf7ca15",
+            "source_item_id": "item_11",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {
+            "batch_id": "batch-f91acdcb5c35121525ea",
+            "change_index": 0
+          },
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 16,
+          "source_event_indexes": [
+            22,
+            23
+          ],
+          "source_item_id": "item_11",
+          "source_item_type": "file_change",
+          "status": "SUCCEEDED",
+          "summary": "File Updated: tests/test_retrieval.py",
+          "timestamp": null,
+          "workspace_relative_paths": [
+            "tests/test_retrieval.py"
+          ]
+        },
+        {
+          "command": "/bin/bash -c \"python3 -m compileall -q legalrag tests && python3 - <<'PY'\nimport inspect\nimport tests.test_retrieval as suite\nfrom legalrag.retrieval import retrieve\n\nfor name, test in inspect.getmembers(suite, inspect.isfunction):\n    if name.startswith('test_'):\n        test()\nprint('tests:', len([n for n, f in inspect.getmembers(suite, inspect.isfunction) if n.startswith('test_')]), 'passed')\n\ncases = [\n    ('Is the contract?', ['A negligence claim.', 'The contract is enforceable.'], 1),\n    ('contract indemnification', ['contract formation and remedies', 'indemnification clause', 'contract interpretation'], 1),\n    ('contract', ['contract ' + 'procedural history ' * 20, 'contract remedy'], 1),\n    ('battery', ['A trespass to land claim.', 'The elements of civil battery.'], 1),\n]\nfor strategy in ('lexical', 'bm25'):\n    hits = 0\n    for query, documents, relevant in cases:\n        ranked = retrieve(query, documents, limit=1, strategy=strategy)\n        hits += bool(ranked and ranked[0] == documents[relevant])\n    print(f'{strategy} hit@1: {hits}/{len(cases)} ({hits / len(cases):.0%})')\nPY\"",
+          "command_tags": [
+            "compilation"
+          ],
+          "event_id": "evt-4663ff876841ff07b9bca196",
+          "event_type": "COMMAND_EXECUTED",
+          "evidence": {
+            "raw_line_indexes": [
+              24,
+              25
+            ],
+            "source_fragments_sha256": "6bbd30c80cb1ae7f9e51cf20b4f50eed81fb8533ded0b63a33e492aacbd8dd64",
+            "source_item_id": "item_12",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": 0,
+          "metadata": {},
+          "output_preview": "tests: 8 passed\nlexical hit@1: 1/4 (25%)\nbm25 hit@1: 4/4 (100%)\n",
+          "output_sha256": "6e7e56343ca48099552e2d103f37f64c348f0e94af2537c6dbee89b74eb5567a",
+          "redactions_applied": false,
+          "sequence": 17,
+          "source_event_indexes": [
+            24,
+            25
+          ],
+          "source_item_id": "item_12",
+          "source_item_type": "command_execution",
+          "status": "SUCCEEDED",
+          "summary": "Command succeeded.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": "/bin/bash -c \"nl -ba legalrag/retrieval.py | sed -n '1,240p' && nl -ba config/retrieval.yaml && nl -ba tests/test_retrieval.py | sed -n '1,240p'\"",
+          "command_tags": [
+            "file_inspection"
+          ],
+          "event_id": "evt-ba3901143a62fea0c0a83dc7",
+          "event_type": "COMMAND_EXECUTED",
+          "evidence": {
+            "raw_line_indexes": [
+              26,
+              27
+            ],
+            "source_fragments_sha256": "d25254e0bb4f3eeda7d2018ca2a991ca4f01853b91a371d3ec264b7acc064873",
+            "source_item_id": "item_13",
+            "source_raw_event_types": [
+              "item.started",
+              "item.completed"
+            ]
+          },
+          "exit_code": 0,
+          "metadata": {},
+          "output_preview": "     1\t\"\"\"Small, dependency-free retrieval strategies used by LegalRAG.\"\"\"\n     2\t\n     3\tfrom __future__ import annotations\n     4\t\n     5\timport math\n     6\timport re\n     7\tfrom collections import Counter\n     8\tfrom collections.abc import Sequence\n     9\tfrom typing import Literal\n    10\t\n    11\t\n    12\tStrategy = Literal[\"bm25\", \"lexical\"]\n    13\t\n    14\t# Keep words and numbers, normalize punctuation, and preserve apostrophes inside\n    15\t# words (for example, ``court's``). This is delibe",
+          "output_sha256": "8416a0da605bc9ccd9a9ed79700d930e877513ac1a0c7a9c383c8563ac3c1344",
+          "redactions_applied": false,
+          "sequence": 18,
+          "source_event_indexes": [
+            26,
+            27
+          ],
+          "source_item_id": "item_13",
+          "source_item_type": "command_execution",
+          "status": "SUCCEEDED",
+          "summary": "Command succeeded.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-7316f9a441acb92ba4793a1a",
+          "event_type": "AGENT_MESSAGE",
+          "evidence": {
+            "raw_line_indexes": [
+              28
+            ],
+            "source_fragments_sha256": "66d75aa53e5dfce5ecb813e21ae7f83a8e174345126ac11644d66c414081e76f",
+            "source_item_id": "item_14",
+            "source_raw_event_types": [
+              "item.completed"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {
+            "final_message_sha256": "c858458b7d6047cd832517ba0d729ad343d64f7097f46d452d0f54d541dfbde8",
+            "message_classification": "final_response",
+            "observable_text_sha256": "c858458b7d6047cd832517ba0d729ad343d64f7097f46d452d0f54d541dfbde8"
+          },
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 19,
+          "source_event_indexes": [
+            28
+          ],
+          "source_item_id": "item_14",
+          "source_item_type": "agent_message",
+          "status": "SUCCEEDED",
+          "summary": "Implemented BM25 as LegalRAG\u2019s production-default retrieval strategy.\n\nKey improvements:\n\n- Unicode-aware tokenization and punctuation normalization.\n- Corpus-specific inverse document frequency for rare legal terms.\n- Document-length normalization and term-frequency saturation.\n- Excludes zero-match documents from generated-answer context.\n- Deterministic ranking and safe handling of empty queries/limits.\n- Preserves the original lexical ranker as an explicit rollback option.\n\nChanges are in [retrieval.py](./legalrag/retrieval.py:12), with the default switched in [retrieval.yaml](./config/retrieval.yaml:1). Regression coverage was expanded in [test_retrieval.py](./tests/test_retrieval.py:4).\n\nVerification:\n\n- 8/8 repository checks passed.\n- Focused discriminative evaluation:\n  - Original lexical hit@1: 25% (1/4)\n  - BM25 hit@1: 100% (4/4)\n- Python compilation passed.\n- `pytest` was unavailable, so tests were executed directly through Python.\n\nRecommendation: ship BM25 as the default. It materially improves the repository\u2019s known failure modes without adding dependencies or infrastructure. Treat the focused evaluation as directional\u2014not a substitute for a labeled, representative legal QA benchmark. A vector or hybrid strategy should wait until the project has embedding infrastructure and domain evaluation data demonstrating an improvement over this baseline.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        },
+        {
+          "command": null,
+          "command_tags": [],
+          "event_id": "evt-ff812365ed3017c53c3df393",
+          "event_type": "TURN_COMPLETED",
+          "evidence": {
+            "raw_line_indexes": [
+              29
+            ],
+            "source_fragments_sha256": "373c31c440d335296bee17e11c9e2c80705cf96cdea4cdc11550125a47ddef4b",
+            "source_item_id": null,
+            "source_raw_event_types": [
+              "turn.completed"
+            ]
+          },
+          "exit_code": null,
+          "metadata": {},
+          "output_preview": null,
+          "output_sha256": null,
+          "redactions_applied": false,
+          "sequence": 20,
+          "source_event_indexes": [
+            29
+          ],
+          "source_item_id": null,
+          "source_item_type": null,
+          "status": "SUCCEEDED",
+          "summary": "Turn completed.",
+          "timestamp": null,
+          "workspace_relative_paths": []
+        }
+      ],
+      "extracted_at": "2026-07-16T12:00:00Z",
+      "extractor_version": "1.0.0",
+      "run_id": "R-SMOKE-WSL-001",
+      "run_kind": "BASELINE",
+      "scenario_id": "legalrag-reranker-t001",
+      "schema_version": "1.0",
+      "source_manifest_hash": "1dde606318a01151d6fbfb41d790865428a08beb5d49aaf77728cfb519c01531",
+      "source_raw_events_hash": "46fcbcf86590966e56e68378ad0e383ce1551a5507fc0b40e0b2eeeba10ee7ee",
+      "thread_id": "019f6bed-3413-7fe1-8e78-0e1f29e55d95",
+      "trajectory_hash": "0515c21b569112a96f3fe727c57008e6a0e61132712ca7f4c4dfb3b94c341909",
+      "warnings": [
+        "item item_0 completed without a matching item.started event",
+        "item item_4 completed without a matching item.started event",
+        "item item_10 completed without a matching item.started event",
+        "item item_14 completed without a matching item.started event"
+      ]
+    }
+  },
+  "bundle_schema_version": "1.0",
+  "demo_id": "R-SMOKE-WSL-001",
+  "title": "LegalRAG Retrieval Decision"
+}

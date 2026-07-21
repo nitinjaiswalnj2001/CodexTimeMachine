@@ -1,0 +1,2 @@
+import type {ReactNode} from 'react';import {PhaseRail} from './PhaseRail';
+export function AppShell({children,phase,onPhase,reduced,onReduced}:{children:ReactNode;phase:number;onPhase:(n:number)=>void;reduced:boolean;onReduced:()=>void}){return <div className={reduced?'app reduced':'app'}><PhaseRail active={phase} onSelect={onPhase} reduced={reduced} onReduced={onReduced}/><main>{children}</main></div>}

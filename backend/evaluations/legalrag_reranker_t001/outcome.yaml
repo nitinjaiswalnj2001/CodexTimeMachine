@@ -1,0 +1,35 @@
+schema_version: "1.0"
+outcome_id: legalrag-reranker-t001-controlled-outcome
+scenario_id: legalrag-reranker-t001
+base_snapshot_hash: a75c4892a95547bad07cf32733f09e882732650581c44fdf9884d90313761ddf
+provenance_type: CONTROLLED_SYNTHETIC
+fixture_notice: >-
+  All benchmark values are synthetic. This fixture exists only to validate the
+  Codex Time Machine evaluation mechanic; it is not organic LegalRAG history and
+  must not be presented as a real production performance result.
+provenance: Controlled synthetic fixture authored for boundary and evaluator mechanics testing.
+temporal_relation: AFTER_CUTOFF
+decision_under_evaluation: Selection of a production-default LegalRAG retrieval strategy.
+known_future_outcome: >-
+  A later controlled representative evaluation covering lexical-overlap,
+  paraphrased, synonym-heavy, long-form legal, and short exact-term questions
+  showed that the small focused comparison was insufficient evidence to choose
+  a production retrieval default. It does not establish that BM25 was wrong.
+evidence_items:
+  - evidence_id: representative-retrieval-eval
+    evidence_kind: BENCHMARK_RESULT
+    relative_path: evidence/representative_retrieval_eval.json
+    sha256: 997ff37b252c5d8c9db5b46eef6e5aae932eacc65d086cf7d7237dc182e83882
+    summary: Synthetic representative labeled retrieval evaluation across five controlled query groups.
+    observed_after_cutoff: true
+    metadata:
+      values_are_synthetic: true
+      scoring_eligible: false
+evaluation_targets:
+  - target_id: representative-labeled-evaluation
+    category: INSUFFICIENT_EVALUATION
+    description: Run a representative labeled retrieval evaluation before committing to a production retrieval default.
+    observable_success_condition: A labeled evaluation covers the declared representative query groups before a default is recommended.
+    related_evidence_ids:
+      - representative-retrieval-eval
+packet_hash: "c039a396270e9b064772aef3523e1ad67f93c171c3c616ad0bc8280d98ef6a32"

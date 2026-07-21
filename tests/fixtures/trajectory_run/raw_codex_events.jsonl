@@ -1,0 +1,13 @@
+{"type":"thread.started","thread_id":"thread-fixture"}
+{"type":"turn.started"}
+{"type":"item.started","item":{"id":"msg-progress","type":"agent_message","text":"I’ll inspect the retrieval pipeline."}}
+{"type":"item.completed","item":{"id":"msg-progress","type":"agent_message","text":"I’ll inspect the retrieval pipeline."}}
+{"type":"item.started","item":{"id":"cmd-success","type":"command_execution","command":"python -c \"print('verified')\"","status":"in_progress"}}
+{"type":"item.completed","item":{"id":"cmd-success","type":"command_execution","command":"python -c \"print('verified')\"","aggregated_output":"verified\n","exit_code":0,"status":"completed"}}
+{"type":"item.started","item":{"id":"cmd-failed","type":"command_execution","command":"pytest -q","status":"in_progress"}}
+{"type":"item.completed","item":{"id":"cmd-failed","type":"command_execution","command":"pytest -q","aggregated_output":"pytest: command not found\n","exit_code":127,"status":"failed"}}
+{"type":"item.started","item":{"id":"files-1","type":"file_change","changes":[{"path":"/home/example/projects/CodexTimeMachine/.ctm_runs/R-TRAJ/workspace/config/retrieval.yaml","kind":"update"},{"path":"/home/example/projects/CodexTimeMachine/.ctm_runs/R-TRAJ/workspace/legalrag/retrieval.py","kind":"update"},{"path":"/home/example/projects/CodexTimeMachine/.ctm_runs/R-TRAJ/workspace/tests/test_retrieval.py","kind":"add"}],"status":"in_progress"}}
+{"type":"item.completed","item":{"id":"files-1","type":"file_change","changes":[{"path":"/home/example/projects/CodexTimeMachine/.ctm_runs/R-TRAJ/workspace/config/retrieval.yaml","kind":"update"},{"path":"/home/example/projects/CodexTimeMachine/.ctm_runs/R-TRAJ/workspace/legalrag/retrieval.py","kind":"update"},{"path":"/home/example/projects/CodexTimeMachine/.ctm_runs/R-TRAJ/workspace/tests/test_retrieval.py","kind":"add"}],"status":"completed"}}
+{"type":"item.started","item":{"id":"msg-final","type":"agent_message","text":"Updated the retrieval configuration and tests."}}
+{"type":"item.completed","item":{"id":"msg-final","type":"agent_message","text":"Updated the retrieval configuration and tests."}}
+{"type":"turn.completed","usage":{"input_tokens":10,"output_tokens":5}}

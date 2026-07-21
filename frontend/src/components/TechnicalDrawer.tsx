@@ -1,0 +1,2 @@
+import type {DemoBundle} from '../types/demo';
+export function TechnicalDrawer({bundle,open,onClose}:{bundle:DemoBundle;open:boolean;onClose:()=>void}){if(!open)return null;return <aside className="technical-drawer" aria-label="Technical evidence drawer"><button onClick={onClose}>Close technical detail</button><h2>Accepted technical evidence</h2><pre>{JSON.stringify({demo_id:bundle.demo_id,artifacts:Object.keys(bundle.artifacts)},null,2)}</pre><p>Observable evidence only. Hidden reasoning and personal paths are excluded.</p></aside>}
